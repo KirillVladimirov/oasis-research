@@ -1,0 +1,139 @@
+@prefix : <http://deep_active_learning#> .
+@prefix dal: <http://example.org/deep_active_learning#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://deep_active_learning> a owl:Ontology .
+
+:3DMedicalImageSegmentation a owl:Class ;
+    rdfs:label "3DMedicalImageSegmentation"^^xsd:string ;
+    rdfs:comment "Deprecated: Very specific subtype (3D vs 2D) of MedicalImageSegmentationTask with zero usage (num_cqs=0). The dimensionality distinction can be modeled via properties or annotations when needed, rather than a dedicated class, to keep the task hierarchy compact."^^xsd:string,
+        "Represents 3D medical image segmentation tasks such as CT or MRI volume segmentation."^^xsd:string ;
+    rdfs:subClassOf :SegmentationTask ;
+    owl:deprecated true .
+
+:ACDCSegmentationTask a owl:Class ;
+    rdfs:label "ACDCSegmentationTask"^^xsd:string ;
+    rdfs:comment "Deprecated: This refers to a very specific benchmark/dataset (ACDC cardiac MRI). Such dataset-level tasks are too narrow for the ontology class hierarchy and are better modeled as instances or metadata rather than subclasses."^^xsd:string,
+        "Represents the specific ACDC cardiac MRI segmentation benchmark task."^^xsd:string ;
+    rdfs:subClassOf :SegmentationTask ;
+    owl:deprecated true .
+
+:AVIRISIndianPinesDataset a owl:Class ;
+    rdfs:label "AVIRISIndianPinesDataset"^^xsd:string ;
+    rdfs:comment "Represents the AVIRIS Indian Pines hyperspectral dataset."^^xsd:string ;
+    rdfs:subClassOf :HyperspectralRemoteSensingData .
+
+:AcquisitionLatency a owl:Class ;
+    rdfs:label "AcquisitionLatency"^^xsd:string ;
+    rdfs:comment "Deprecated: Narrow aspect of computational/temporal cost that can be captured within ComputationalCostConstraint and RealTimeConstraint without its own class."^^xsd:string,
+        "Represents constraints on latency incurred by acquisition strategies."^^xsd:string ;
+    rdfs:subClassOf :Constraint ;
+    owl:deprecated true .
+
+:AcquisitionStep a owl:Class ;
+    rdfs:label "AcquisitionStep"^^xsd:string ;
+    rdfs:comment "Represents the procedural step of acquiring labeled data in an active learning cycle."^^xsd:string ;
+    rdfs:subClassOf :ActiveLearning .
+
+:ActiveLearner a owl:Class ;
+    rdfs:label "ActiveLearner"^^xsd:string ;
+    rdfs:comment "Represents the learner or model participating in an active learning process."^^xsd:string ;
+    rdfs:subClassOf :OtherConcept .
+
+:ActiveLearningErrorMetric a owl:Class ;
+    rdfs:label "ActiveLearningErrorMetric"^^xsd:string ;
+    rdfs:comment "Represents metrics focused on error in active learning experiments."^^xsd:string ;
+    rdfs:subClassOf :Metric .
+
+:ActiveLearningEvaluationFramework a owl:Class ;
+    rdfs:label "ActiveLearningEvaluationFramework"^^xsd:string ;
+    rdfs:comment "Deprecated: Describes a specific use case (evaluation) rather than a fundamentally different kind of framework. This can be captured via a purpose/role property on ActiveLearningFramework instances instead of a dedicated subclass. No usage evidence supports keeping a separate class."^^xsd:string,
+        "Deprecated: Special-purpose evaluation frameworks are a non-critical specialization of ActiveLearningFramework and are unused (num_cqs=0). To keep the ontology compact, do not introduce a separate subclass; instead, reuse the more general ActiveLearningFramework/GeneralPurposeDeepActiveLearningFramework as needed."^^xsd:string,
+        "Represents frameworks designed to evaluate active learning methods."^^xsd:string ;
+    rdfs:subClassOf :ActiveLearningFramework ;
+    owl:deprecated true .
+
+:ActiveLearningIterationConcept a owl:Class ;
+    rdfs:label "ActiveLearningIterationConcept"^^xsd:string ;
+    rdfs:comment "Conceptual representation of iterations in active learning processes."^^xsd:string,
+        "Deprecated: Unused (no CQs/answers) and semantically vague compared to the clearer, more useful ActiveLearningTaxonomy; removing it reduces redundancy without losing essential distinctions."^^xsd:string ;
+    rdfs:subClassOf :OtherConcept ;
+    owl:deprecated true .
+
+:ActiveLearningPerformance a owl:Class ;
+    rdfs:label "ActiveLearningPerformance"^^xsd:string ;
+    rdfs:comment "Deprecated: Overly broad and informal label for performance in active learning; better represented by concrete metrics such as AreaUnderBudgetCurve. Unused, so removed for compactness."^^xsd:string,
+        "Represents metrics focusing on performance in active learning contexts."^^xsd:string ;
+    rdfs:subClassOf :PerformanceMetric ;
+    owl:deprecated true .
+
+:AlphabeticOptimalityCriteria a owl:Class ;
+    rdfs:label "AlphabeticOptimalityCriteria"^^xsd:string ;
+    rdfs:comment "Represents the family of A-, D-, E-, and G-optimality criteria."^^xsd:string ;
+    rdfs:subClassOf :Metric .
+
+:AnnotatesTask a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "AnnotatesTask"^^xsd:string ;
+    rdfs:comment "Relates an Annotation to the Task it is created to support in a deep active learning setting (e.g., classification, segmentation, translation). This captures that annotations are produced and budgeted with respect to a specific learning or evaluation task."^^xsd:string ;
+    rdfs:domain :Annotation ;
+    rdfs:range :Task .
+
+:AnnotationAction a owl:Class ;
+    rdfs:label "AnnotationAction"^^xsd:string ;
+    rdfs:comment "Deprecated: Represents fine-grained annotation steps by annotators, which is more of a workflow/event notion than a core methodological subclass; unused and overly granular, so deprecated."^^xsd:string,
+        "Represents atomic annotation actions taken by annotators."^^xsd:string ;
+    rdfs:subClassOf :Method ;
+    owl:deprecated true .
+
+:AnnotationCostMetric a owl:Class ;
+    rdfs:label "AnnotationCostMetric"^^xsd:string ;
+    rdfs:comment "Represents metrics quantifying annotation cost."^^xsd:string ;
+    rdfs:subClassOf :Metric .
+
+:AnnotationProcess a owl:Class ;
+    rdfs:label "AnnotationProcess"^^xsd:string ;
+    rdfs:comment "Represents tasks describing the annotation of data by humans or oracles."^^xsd:string ;
+    rdfs:subClassOf :Task .
+
+:AnnotationRoundsConstraint a owl:Class ;
+    rdfs:label "AnnotationRoundsConstraint"^^xsd:string ;
+    rdfs:comment "Deprecated: Number of annotation rounds is a detailed protocol parameter that can be modeled as a property of an experiment rather than a separate constraint class."^^xsd:string,
+        "Represents constraints on the number of annotation rounds in active learning."^^xsd:string ;
+    rdfs:subClassOf :Constraint ;
+    owl:deprecated true .
+
+:AnnotationTimeConstraint a owl:Class ;
+    rdfs:label "AnnotationTimeConstraint"^^xsd:string ;
+    rdfs:comment "Represents constraints on the wall-clock time available for annotation."^^xsd:string ;
+    rdfs:subClassOf :Constraint .
+
+:AppliedToDataset a owl:ObjectProperty ;
+    rdfs:label "AppliedToDataset"^^xsd:string ;
+    rdfs:comment "Relates a task to a dataset on which that task is defined, studied, or evaluated in a deep active learning setting. This captures cases such as a classification or segmentation task being carried out on a specific benchmark dataset. It is intended for experimental or study-specific task instances rather than abstract task types."^^xsd:string ;
+    rdfs:domain :Task ;
+    rdfs:range :Dataset .
+
+:AreaUnderBudgetCurve a owl:Class ;
+    rdfs:label "AreaUnderBudgetCurve"^^xsd:string ;
+    rdfs:comment "Represents the area under a budget-performance curve."^^xsd:string ;
+    rdfs:subClassOf :PerformanceMetric .
+
+:Autoencoder a owl:Class ;
+    rdfs:label "Autoencoder"^^xsd:string ;
+    rdfs:comment "Represents autoencoder models used for representation learning or data generation."^^xsd:string ;
+    rdfs:subClassOf :DeepGenerativeModel .
+
+:AvirisImages a owl:Class ;
+    rdfs:label "AvirisImages"^^xsd:string ;
+    rdfs:comment "Represents AVIRIS hyperspectral images."^^xsd:string ;
+    rdfs:subClassOf :HyperspectralRemoteSensingData .
+
+:BasedOnUncertainty a owl:ObjectProperty ;
+    rdfs:label "BasedOnUncertainty"^^xsd:string ;
+    rdfs:comment "Relates a Bayesian active learning strategy to the notion of uncertainty it exploits for selecting informative samples. This property indicates that the acquisition method’s criterion is derived from or fundamentally depends on model uncertainty (e.g., Bayesian or predictive uncertainty)."^^xsd:string ;
+    rdfs:domain :BALD ;
+    rdfs:range :Uncertainty .
+

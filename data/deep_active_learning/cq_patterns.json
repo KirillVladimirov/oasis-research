@@ -1,0 +1,134 @@
+[
+  {
+    "pattern_id": "comparison_methods",
+    "role": "comparison",
+    "template": "How does <Method1> compare to <Method2> in terms of <Metric> for <Task>?",
+    "slots": [
+      {
+        "name": "Method1",
+        "entity_list": "strategies",
+        "description": "Первый метод/стратегия для сравнения"
+      },
+      {
+        "name": "Method2",
+        "entity_list": "strategies",
+        "description": "Второй метод/стратегия для сравнения"
+      },
+      {
+        "name": "Metric",
+        "entity_list": "metrics",
+        "description": "Метрика для сравнения"
+      },
+      {
+        "name": "Task",
+        "entity_list": "tasks",
+        "description": "Задача, для которой выполняется сравнение"
+      }
+    ]
+  },
+  {
+    "pattern_id": "relation_effect",
+    "role": "relation",
+    "template": "How does <Strategy> affect <Metric> on <Dataset> for <Task>?",
+    "slots": [
+      {
+        "name": "Strategy",
+        "entity_list": "strategies",
+        "description": "Стратегия активного обучения"
+      },
+      {
+        "name": "Metric",
+        "entity_list": "metrics",
+        "description": "Метрика производительности"
+      },
+      {
+        "name": "Dataset",
+        "entity_list": "datasets",
+        "description": "Набор данных"
+      },
+      {
+        "name": "Task",
+        "entity_list": "tasks",
+        "description": "Тип задачи"
+      }
+    ]
+  },
+  {
+    "pattern_id": "constraint_budget",
+    "role": "constraint",
+    "template": "Under what annotation budget constraints does <Strategy> outperform <Baseline>?",
+    "slots": [
+      {
+        "name": "Strategy",
+        "entity_list": "strategies",
+        "description": "Стратегия активного обучения"
+      },
+      {
+        "name": "Baseline",
+        "entity_list": "strategies",
+        "description": "Базовый метод для сравнения"
+      }
+    ]
+  },
+  {
+    "pattern_id": "class_definition",
+    "role": "class",
+    "template": "What is <Entity> in the context of <Domain>?",
+    "slots": [
+      {
+        "name": "Entity",
+        "entity_list": "strategies",
+        "description": "Сущность для определения (метод, модель, стратегия)"
+      },
+      {
+        "name": "Domain",
+        "entity_list": "tasks",
+        "description": "Доменная область применения"
+      }
+    ]
+  },
+  {
+    "pattern_id": "process_description",
+    "role": "process",
+    "template": "How does <Process> work for <Task> using <Method>?",
+    "slots": [
+      {
+        "name": "Process",
+        "entity_list": "strategies",
+        "description": "Процесс или алгоритм"
+      },
+      {
+        "name": "Task",
+        "entity_list": "tasks",
+        "description": "Тип задачи"
+      },
+      {
+        "name": "Method",
+        "entity_list": "strategies",
+        "description": "Метод реализации"
+      }
+    ]
+  },
+  {
+    "pattern_id": "performance_evaluation",
+    "role": "relation",
+    "template": "What is the performance of <Strategy> on <Dataset> measured by <Metric>?",
+    "slots": [
+      {
+        "name": "Strategy",
+        "entity_list": "strategies",
+        "description": "Стратегия активного обучения"
+      },
+      {
+        "name": "Dataset",
+        "entity_list": "datasets",
+        "description": "Набор данных"
+      },
+      {
+        "name": "Metric",
+        "entity_list": "metrics",
+        "description": "Метрика оценки"
+      }
+    ]
+  }
+]

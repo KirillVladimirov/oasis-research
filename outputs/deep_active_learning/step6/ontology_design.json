@@ -1,0 +1,2666 @@
+{
+  "classes": [
+    {
+      "class_name": "Task",
+      "parent_class": "owl:Thing",
+      "comment": "Root class for learning, annotation, and optimization tasks."
+    },
+    {
+      "class_name": "Method",
+      "parent_class": "owl:Thing",
+      "comment": "Root class for algorithms, procedures, and learning methods."
+    },
+    {
+      "class_name": "Metric",
+      "parent_class": "owl:Thing",
+      "comment": "Root class for evaluation and scoring measures."
+    },
+    {
+      "class_name": "Dataset",
+      "parent_class": "owl:Thing",
+      "comment": "Root class for datasets, data collections, and data subsets."
+    },
+    {
+      "class_name": "Constraint",
+      "parent_class": "owl:Thing",
+      "comment": "Root class for resource, data, and setting constraints."
+    },
+    {
+      "class_name": "OtherConcept",
+      "parent_class": "owl:Thing",
+      "comment": "Root class for structural, statistical, and domain concepts that are not tasks, methods, metrics, datasets, or explicit constraints."
+    },
+    {
+      "class_name": "ActiveLearningTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks whose primary focus is to study or apply active learning methods."
+    },
+    {
+      "class_name": "MedicalImageAnalysisTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks related to analysis of medical images, including classification, segmentation, and reconstruction."
+    },
+    {
+      "class_name": "SegmentationTask",
+      "parent_class": "MedicalImageAnalysisTask",
+      "comment": "Represents tasks whose goal is to segment images or volumes into meaningful regions."
+    },
+    {
+      "class_name": "MedicalImageSegmentationTask",
+      "parent_class": "SegmentationTask",
+      "comment": "Represents segmentation tasks specifically in the medical imaging domain."
+    },
+    {
+      "class_name": "ThreeDSegmentationTask",
+      "parent_class": "SegmentationTask",
+      "comment": "Represents segmentation tasks operating on 3D data such as volumes or point clouds."
+    },
+    {
+      "class_name": "ImageSegmentationTask",
+      "parent_class": "SegmentationTask",
+      "comment": "Represents general 2D image segmentation tasks."
+    },
+    {
+      "class_name": "PixelLevelSegmentation",
+      "parent_class": "SegmentationTask",
+      "comment": "Represents segmentation tasks that operate at pixel or voxel level."
+    },
+    {
+      "class_name": "DeepActiveSegmentation",
+      "parent_class": "SegmentationTask",
+      "comment": "Represents deep-learning-based active learning tasks for segmentation."
+    },
+    {
+      "class_name": "3DMedicalImageSegmentation",
+      "parent_class": "MedicalImageSegmentationTask",
+      "comment": "Represents 3D medical image segmentation tasks such as CT or MRI volume segmentation."
+    },
+    {
+      "class_name": "InteractiveMedicalImageSegmentation",
+      "parent_class": "MedicalImageSegmentationTask",
+      "comment": "Represents interactive segmentation tasks where a user iteratively refines medical image segmentations."
+    },
+    {
+      "class_name": "WholeSlidePathologySegmentation",
+      "parent_class": "MedicalImageSegmentationTask",
+      "comment": "Represents segmentation of whole-slide pathology images."
+    },
+    {
+      "class_name": "RetinalBloodVesselSegmentation",
+      "parent_class": "MedicalImageSegmentationTask",
+      "comment": "Represents tasks focused on segmenting retinal blood vessels."
+    },
+    {
+      "class_name": "RetinalVesselSegmentation",
+      "parent_class": "MedicalImageSegmentationTask",
+      "comment": "Represents segmentation tasks of retinal vessels in ophthalmoscopy or fundus images."
+    },
+    {
+      "class_name": "ACDCSegmentationTask",
+      "parent_class": "MedicalImageSegmentationTask",
+      "comment": "Represents the specific ACDC cardiac MRI segmentation benchmark task."
+    },
+    {
+      "class_name": "DeepLearningMedicalImageAnalysis",
+      "parent_class": "MedicalImageAnalysisTask",
+      "comment": "Represents tasks that apply deep learning to medical image analysis problems."
+    },
+    {
+      "class_name": "DeepImageSegmentation",
+      "parent_class": "ImageSegmentationTask",
+      "comment": "Represents deep-learning-based image segmentation tasks."
+    },
+    {
+      "class_name": "MedicalImageClassificationTask",
+      "parent_class": "MedicalImageAnalysisTask",
+      "comment": "Represents classification tasks on medical images such as disease presence detection."
+    },
+    {
+      "class_name": "BreastCancerHistopathologyClassificationTask",
+      "parent_class": "MedicalImageClassificationTask",
+      "comment": "Represents breast cancer classification tasks on histopathology images."
+    },
+    {
+      "class_name": "ChestXrayPneumoniaClassificationTask",
+      "parent_class": "MedicalImageClassificationTask",
+      "comment": "Represents pneumonia classification tasks on chest X-ray images."
+    },
+    {
+      "class_name": "PulmonaryNoduleDetection",
+      "parent_class": "MedicalImageAnalysisTask",
+      "comment": "Represents detection tasks of pulmonary nodules in medical imaging."
+    },
+    {
+      "class_name": "COVID19Diagnosis",
+      "parent_class": "MedicalImageAnalysisTask",
+      "comment": "Represents COVID-19 diagnosis tasks using medical imaging data."
+    },
+    {
+      "class_name": "BoundingBoxAnnotation",
+      "parent_class": "DetectionTask",
+      "comment": "Represents tasks where annotations are bounding boxes around objects."
+    },
+    {
+      "class_name": "ObjectCenterAnnotation",
+      "parent_class": "DetectionTask",
+      "comment": "Represents tasks where annotations are object center points."
+    },
+    {
+      "class_name": "ImageClassificationTask",
+      "parent_class": "Task",
+      "comment": "Represents general image classification tasks."
+    },
+    {
+      "class_name": "ClassificationTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks where the goal is to assign discrete labels to instances."
+    },
+    {
+      "class_name": "RegressionTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks where the goal is to predict continuous outputs."
+    },
+    {
+      "class_name": "DetectionTask",
+      "parent_class": "VisionTask",
+      "comment": "Represents object detection tasks in images or videos."
+    },
+    {
+      "class_name": "ObjectClassificationAndDetectionTask",
+      "parent_class": "VisionTask",
+      "comment": "Represents combined classification and detection tasks in vision."
+    },
+    {
+      "class_name": "ObjectDetectionTask",
+      "parent_class": "DetectionTask",
+      "comment": "Represents tasks focused solely on detecting object instances."
+    },
+    {
+      "class_name": "SegmentationPerformance",
+      "parent_class": "Metric",
+      "comment": "Represents metrics for evaluating segmentation quality."
+    },
+    {
+      "class_name": "SegmentationPerformanceMetric",
+      "parent_class": "SegmentationPerformance",
+      "comment": "Represents specific performance metrics used for segmentation, such as Dice or IoU."
+    },
+    {
+      "class_name": "LanguageTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks in natural language processing and related language technologies."
+    },
+    {
+      "class_name": "NaturalLanguageProcessing",
+      "parent_class": "LanguageTask",
+      "comment": "Represents the general task area of natural language processing."
+    },
+    {
+      "class_name": "MachineTranslation",
+      "parent_class": "LanguageTask",
+      "comment": "Represents machine translation tasks between languages."
+    },
+    {
+      "class_name": "LowResourceMachineTranslation",
+      "parent_class": "MachineTranslation",
+      "comment": "Represents machine translation tasks in low-resource language settings."
+    },
+    {
+      "class_name": "NeuralMachineTranslation",
+      "parent_class": "MachineTranslation",
+      "comment": "Represents neural-network-based machine translation tasks."
+    },
+    {
+      "class_name": "MultilingualParsing",
+      "parent_class": "LanguageTask",
+      "comment": "Represents syntactic or semantic parsing tasks across multiple languages."
+    },
+    {
+      "class_name": "Parsing",
+      "parent_class": "LanguageTask",
+      "comment": "Represents tasks that parse sentences into syntactic or semantic structures."
+    },
+    {
+      "class_name": "SemanticParsingTask",
+      "parent_class": "Parsing",
+      "comment": "Represents tasks that map natural language to machine-interpretable meaning representations."
+    },
+    {
+      "class_name": "MultilingualSemanticParsingTask",
+      "parent_class": "SemanticParsingTask",
+      "comment": "Represents semantic parsing tasks across multiple languages."
+    },
+    {
+      "class_name": "NamedEntityRecognition",
+      "parent_class": "LanguageTask",
+      "comment": "Represents named entity recognition tasks."
+    },
+    {
+      "class_name": "NamedEntityRecognitionTask",
+      "parent_class": "NamedEntityRecognition",
+      "comment": "Represents specific NER tasks considered in the active learning setting."
+    },
+    {
+      "class_name": "PartOfSpeechTagging",
+      "parent_class": "LanguageTask",
+      "comment": "Represents part-of-speech tagging tasks."
+    },
+    {
+      "class_name": "SemanticRoleLabeling",
+      "parent_class": "LanguageTask",
+      "comment": "Represents semantic role labeling tasks."
+    },
+    {
+      "class_name": "LanguageModeling",
+      "parent_class": "LanguageTask",
+      "comment": "Represents language modeling tasks such as next-token prediction or masked language modeling."
+    },
+    {
+      "class_name": "VisionTask",
+      "parent_class": "Task",
+      "comment": "Represents computer vision tasks such as classification, detection, and segmentation."
+    },
+    {
+      "class_name": "VideoRecognitionTask",
+      "parent_class": "VisionTask",
+      "comment": "Represents tasks for recognizing actions or activities in videos."
+    },
+    {
+      "class_name": "VideoActivityRecognition",
+      "parent_class": "VideoRecognitionTask",
+      "comment": "Represents human activity recognition tasks in video data."
+    },
+    {
+      "class_name": "PointCloudSemanticSegmentationTask",
+      "parent_class": "VisionTask",
+      "comment": "Represents semantic segmentation tasks on 3D point cloud data."
+    },
+    {
+      "class_name": "ClinicalTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks with explicit clinical relevance or use."
+    },
+    {
+      "class_name": "TechnicalTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks focusing on technical system properties or algorithmic goals."
+    },
+    {
+      "class_name": "MedicalDiagnosis",
+      "parent_class": "ClinicalTask",
+      "comment": "Represents tasks concerned with diagnosing disease or conditions."
+    },
+    {
+      "class_name": "MedicalDiagnosticsTask",
+      "parent_class": "MedicalDiagnosis",
+      "comment": "Represents specific diagnostic tasks in medical imaging or clinical data."
+    },
+    {
+      "class_name": "DiseaseDiagnosis",
+      "parent_class": "MedicalDiagnosis",
+      "comment": "Represents disease-specific diagnosis tasks."
+    },
+    {
+      "class_name": "CancerStaging",
+      "parent_class": "MedicalDiagnosis",
+      "comment": "Represents tasks that stage the progression of cancer."
+    },
+    {
+      "class_name": "PrognosticPrediction",
+      "parent_class": "ClinicalTask",
+      "comment": "Represents tasks predicting patient outcomes or prognosis."
+    },
+    {
+      "class_name": "ModelMaintenance",
+      "parent_class": "Task",
+      "comment": "Represents tasks aimed at monitoring and updating deployed models."
+    },
+    {
+      "class_name": "StreamingClassificationTask",
+      "parent_class": "Task",
+      "comment": "Represents classification tasks on data streams arriving over time."
+    },
+    {
+      "class_name": "DataStreamScenario",
+      "parent_class": "Task",
+      "comment": "Represents generic tasks defined on streaming data scenarios."
+    },
+    {
+      "class_name": "DomainAdaptationActiveLearningSetting",
+      "parent_class": "Task",
+      "comment": "Represents tasks combining domain adaptation and active learning."
+    },
+    {
+      "class_name": "UnsupervisedAuxiliaryTask",
+      "parent_class": "Task",
+      "comment": "Represents auxiliary unsupervised tasks used to support representation learning or active learning."
+    },
+    {
+      "class_name": "ConstrainedOptimizationProblemTask",
+      "parent_class": "Task",
+      "comment": "Represents optimization tasks subject to explicit constraints."
+    },
+    {
+      "class_name": "TopologyStructureOptimizationTask",
+      "parent_class": "ConstrainedOptimizationProblemTask",
+      "comment": "Represents topology or structure optimization tasks solved under constraints."
+    },
+    {
+      "class_name": "ZeroOneKnapsackProblem",
+      "parent_class": "ConstrainedOptimizationProblemTask",
+      "comment": "Represents the 0-1 knapsack combinatorial optimization task."
+    },
+    {
+      "class_name": "OnlineActiveLinearRegression",
+      "parent_class": "Task",
+      "comment": "Represents online linear regression tasks in active learning settings."
+    },
+    {
+      "class_name": "ImitationLearning",
+      "parent_class": "Task",
+      "comment": "Represents tasks where policies are learned from demonstrations."
+    },
+    {
+      "class_name": "CountingTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks where the objective is to count instances or events."
+    },
+    {
+      "class_name": "PretextTask",
+      "parent_class": "Task",
+      "comment": "Represents self-supervised or proxy tasks used for pretraining."
+    },
+    {
+      "class_name": "SurveyStyleResearchTask",
+      "parent_class": "Task",
+      "comment": "Represents survey-based research tasks used to benchmark or analyze methods."
+    },
+    {
+      "class_name": "RealWorldTasks",
+      "parent_class": "Task",
+      "comment": "Represents real-world application tasks considered in the active learning literature."
+    },
+    {
+      "class_name": "DeepLearningTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks that primarily involve deep learning models."
+    },
+    {
+      "class_name": "DomainAdaptationSegmentation",
+      "parent_class": "SegmentationTask",
+      "comment": "Represents segmentation tasks under domain adaptation scenarios."
+    },
+    {
+      "class_name": "DownstreamTask",
+      "parent_class": "Task",
+      "comment": "Represents downstream application tasks fed by pretrained models or representations."
+    },
+    {
+      "class_name": "WebCrawlingTask",
+      "parent_class": "Task",
+      "comment": "Represents tasks that involve crawling the web to collect data."
+    },
+    {
+      "class_name": "ActiveLearningMethod",
+      "parent_class": "Method",
+      "comment": "Represents methods whose primary purpose is to perform active learning."
+    },
+    {
+      "class_name": "ActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents the general active learning methodology and process."
+    },
+    {
+      "class_name": "ActiveLearningLoop",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents the iterative loop procedure of selecting, labeling, and retraining in active learning."
+    },
+    {
+      "class_name": "ActiveLearningCycle",
+      "parent_class": "ActiveLearningLoop",
+      "comment": "Represents a single cycle of query selection, annotation, and model update in active learning."
+    },
+    {
+      "class_name": "ActiveLearningIteration",
+      "parent_class": "ActiveLearningLoop",
+      "comment": "Represents one iteration of the active learning loop."
+    },
+    {
+      "class_name": "ActiveLearningIterationConcept",
+      "parent_class": "OtherConcept",
+      "comment": "Conceptual representation of iterations in active learning processes."
+    },
+    {
+      "class_name": "ActiveLearningStrategy",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents high-level strategies that guide active learning behavior."
+    },
+    {
+      "class_name": "AcquisitionStrategy",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents strategies for acquiring new instances to label in active learning."
+    },
+    {
+      "class_name": "ActiveLearningAcquisitionStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition strategies specifically designed for active learning."
+    },
+    {
+      "class_name": "BatchAcquisitionStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition strategies that select batches of instances per iteration."
+    },
+    {
+      "class_name": "UncertaintyBasedAcquisitionStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition strategies that rely on uncertainty estimates."
+    },
+    {
+      "class_name": "DiversityBasedAcquisitionStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition strategies that emphasize diversity among selected instances."
+    },
+    {
+      "class_name": "HybridUncertaintyDiversityAcquisitionStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition strategies that combine uncertainty and diversity signals."
+    },
+    {
+      "class_name": "RandomAcquisitionStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition strategies that select instances randomly as a baseline."
+    },
+    {
+      "class_name": "ImageBasedAcquisitionStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition strategies that operate at image or patch level."
+    },
+    {
+      "class_name": "RegionBasedAcquisitionStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition strategies that focus on selecting spatial regions."
+    },
+    {
+      "class_name": "MarginBasedAcquisitionStrategy",
+      "parent_class": "UncertaintyBasedAcquisitionStrategy",
+      "comment": "Represents acquisition strategies that use classification margins as uncertainty criteria."
+    },
+    {
+      "class_name": "InformationGainBasedAcquisitionStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition strategies driven by expected information gain."
+    },
+    {
+      "class_name": "TaskTailoredAcquisitionCriterion",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents acquisition criteria tailored to specific downstream tasks."
+    },
+    {
+      "class_name": "AcquisitionFunction",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents mathematical acquisition functions that score candidate instances."
+    },
+    {
+      "class_name": "AcquisitionFunctionMethod",
+      "parent_class": "AcquisitionFunction",
+      "comment": "Represents specific methodological implementations of acquisition functions."
+    },
+    {
+      "class_name": "AcquisitionStep",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents the procedural step of acquiring labeled data in an active learning cycle."
+    },
+    {
+      "class_name": "AcquisitionObjective",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents optimization objectives underlying acquisition strategies."
+    },
+    {
+      "class_name": "UncertaintySampling",
+      "parent_class": "UncertaintyBasedAcquisitionStrategy",
+      "comment": "Represents classic uncertainty sampling strategies in active learning."
+    },
+    {
+      "class_name": "UncertaintyBasedStrategies",
+      "parent_class": "UncertaintyBasedAcquisitionStrategy",
+      "comment": "Represents families of uncertainty-based selection strategies."
+    },
+    {
+      "class_name": "PureUncertaintySampling",
+      "parent_class": "UncertaintySampling",
+      "comment": "Represents uncertainty sampling without additional diversity or structure constraints."
+    },
+    {
+      "class_name": "LeastConfidenceStrategy",
+      "parent_class": "UncertaintySampling",
+      "comment": "Represents uncertainty sampling based on least confident predictions."
+    },
+    {
+      "class_name": "MarginSamplingStrategy",
+      "parent_class": "UncertaintySampling",
+      "comment": "Represents uncertainty sampling based on the margin between top class probabilities."
+    },
+    {
+      "class_name": "LeastConfidenceSampling",
+      "parent_class": "UncertaintySampling",
+      "comment": "Represents strategies selecting instances with lowest prediction confidence."
+    },
+    {
+      "class_name": "BALD",
+      "parent_class": "UncertaintySampling",
+      "comment": "Represents Bayesian Active Learning by Disagreement (BALD) based selection criteria."
+    },
+    {
+      "class_name": "BALDMethod",
+      "parent_class": "BALD",
+      "comment": "Represents methods implementing the BALD acquisition principle."
+    },
+    {
+      "class_name": "BayesianActiveLearningByDisagreement",
+      "parent_class": "BALD",
+      "comment": "Represents the classical BALD acquisition method defined via mutual information."
+    },
+    {
+      "class_name": "BALDAcquisitionFunction",
+      "parent_class": "BALD",
+      "comment": "Represents acquisition functions that implement BALD-based mutual information scoring."
+    },
+    {
+      "class_name": "BALDMu tualInformationAcquisition",
+      "parent_class": "BALD",
+      "comment": "Represents BALD-style acquisition functions explicitly formulated via mutual information."
+    },
+    {
+      "class_name": "BALDAcquisitionStrategy",
+      "parent_class": "BALD",
+      "comment": "Represents acquisition strategies that are specific instantiations of the BALD principle."
+    },
+    {
+      "class_name": "BatchBALD",
+      "parent_class": "BALD",
+      "comment": "Represents the BatchBALD acquisition method that selects an informative batch jointly."
+    },
+    {
+      "class_name": "BatchBALDMethod",
+      "parent_class": "BatchBALD",
+      "comment": "Represents specific algorithmic instantiations of BatchBALD."
+    },
+    {
+      "class_name": "BatchBALDAcquisition",
+      "parent_class": "BatchBALD",
+      "comment": "Represents the acquisition procedure associated with BatchBALD."
+    },
+    {
+      "class_name": "UncertaintyBasedActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods whose core signal is model uncertainty."
+    },
+    {
+      "class_name": "UncertaintyBasedCriterion",
+      "parent_class": "UncertaintyBasedActiveLearning",
+      "comment": "Represents quantitative criteria used to rank instances by uncertainty."
+    },
+    {
+      "class_name": "UncertaintyBasedBatchAcquisition",
+      "parent_class": "UncertaintyBasedActiveLearning",
+      "comment": "Represents batch acquisition methods based primarily on uncertainty scores."
+    },
+    {
+      "class_name": "UncertaintyDrivenAcquisition",
+      "parent_class": "UncertaintyBasedActiveLearning",
+      "comment": "Represents acquisition methods whose objective is informed by uncertainty."
+    },
+    {
+      "class_name": "UncertaintyBasedObjective",
+      "parent_class": "UncertaintyBasedActiveLearning",
+      "comment": "Represents objective functions that use uncertainty to guide active learning."
+    },
+    {
+      "class_name": "UncertaintyInformationBasedMethod",
+      "parent_class": "UncertaintyBasedActiveLearning",
+      "comment": "Represents methods that combine uncertainty with information-based criteria."
+    },
+    {
+      "class_name": "UncertaintyEstimationTechnique",
+      "parent_class": "Method",
+      "comment": "Represents computational techniques used to estimate predictive or parameter uncertainty."
+    },
+    {
+      "class_name": "UncertaintyEstimationMethod",
+      "parent_class": "UncertaintyEstimationTechnique",
+      "comment": "Represents specific methods for estimating uncertainty in models."
+    },
+    {
+      "class_name": "UncertaintyEstimator",
+      "parent_class": "UncertaintyEstimationTechnique",
+      "comment": "Represents components that output uncertainty estimates for predictions."
+    },
+    {
+      "class_name": "DiversityBasedActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods that explicitly promote diversity in selected batches."
+    },
+    {
+      "class_name": "DiversityBasedSelection",
+      "parent_class": "DiversityBasedActiveLearning",
+      "comment": "Represents selection procedures whose primary goal is to ensure diversity."
+    },
+    {
+      "class_name": "DiversityBasedDeepActiveLearning",
+      "parent_class": "DiversityBasedActiveLearning",
+      "comment": "Represents deep active learning methods emphasizing diversity."
+    },
+    {
+      "class_name": "DiversityBasedAcquisition",
+      "parent_class": "DiversityBasedActiveLearning",
+      "comment": "Represents acquisition procedures that enforce diversity among queries."
+    },
+    {
+      "class_name": "DiversityAwareSelection",
+      "parent_class": "DiversityBasedActiveLearning",
+      "comment": "Represents selection methods explicitly aware of redundancy and diversity trade-offs."
+    },
+    {
+      "class_name": "DiversityAwareBatchSelection",
+      "parent_class": "DiversityBasedActiveLearning",
+      "comment": "Represents batch selection procedures combining informativeness and diversity."
+    },
+    {
+      "class_name": "RegionBasedDiversityAwareActiveLearning",
+      "parent_class": "DiversityBasedActiveLearning",
+      "comment": "Represents region-based active learning methods that also enforce diversity."
+    },
+    {
+      "class_name": "RepresentativenessBasedActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods that emphasize sample representativeness."
+    },
+    {
+      "class_name": "RepresentativenessBasedSampling",
+      "parent_class": "RepresentativenessBasedActiveLearning",
+      "comment": "Represents sampling methods focusing on representativeness."
+    },
+    {
+      "class_name": "RepresentativenessBasedActiveLearningTaxonomy",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents taxonomies that categorize active learning methods by representativeness."
+    },
+    {
+      "class_name": "RepresentationLearningBasedActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods that operate in learned representation spaces."
+    },
+    {
+      "class_name": "ExpectedErrorReduction",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents selection methods that approximate expected error reduction."
+    },
+    {
+      "class_name": "ExpectedModelChangeActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods driven by expected model change scores."
+    },
+    {
+      "class_name": "ExpectedModelChangeMethod",
+      "parent_class": "ExpectedModelChangeActiveLearning",
+      "comment": "Represents concrete algorithms that implement expected model change selection."
+    },
+    {
+      "class_name": "ExpectedModelChangeSampling",
+      "parent_class": "ExpectedModelChangeActiveLearning",
+      "comment": "Represents sampling procedures based on expected gradient or parameter changes."
+    },
+    {
+      "class_name": "ExpectedGradientLengthAcquisition",
+      "parent_class": "ExpectedModelChangeActiveLearning",
+      "comment": "Represents acquisition strategies using expected gradient length as a signal."
+    },
+    {
+      "class_name": "PoolBasedActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents pool-based active learning setups where queries are drawn from a static unlabeled pool."
+    },
+    {
+      "class_name": "PoolBasedSampling",
+      "parent_class": "PoolBasedActiveLearning",
+      "comment": "Represents generic pool-based sampling strategies."
+    },
+    {
+      "class_name": "PoolBasedDeepActiveLearning",
+      "parent_class": "PoolBasedActiveLearning",
+      "comment": "Represents pool-based active learning methods built on deep models."
+    },
+    {
+      "class_name": "PoolBasedDeepActiveLearningProtocols",
+      "parent_class": "PoolBasedDeepActiveLearning",
+      "comment": "Represents experimental protocols for pool-based deep active learning."
+    },
+    {
+      "class_name": "PoolBasedUncertaintySampling",
+      "parent_class": "PoolBasedActiveLearning",
+      "comment": "Represents uncertainty sampling strategies applied in a pool-based setting."
+    },
+    {
+      "class_name": "StreamBasedActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods operating on data streams."
+    },
+    {
+      "class_name": "StreamBasedSelectiveSampling",
+      "parent_class": "StreamBasedActiveLearning",
+      "comment": "Represents selective sampling methods for data streams."
+    },
+    {
+      "class_name": "DataStreamActiveLearning",
+      "parent_class": "StreamBasedActiveLearning",
+      "comment": "Represents active learning methods specifically designed for streaming data scenarios."
+    },
+    {
+      "class_name": "BatchModeActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods that acquire instances in batches."
+    },
+    {
+      "class_name": "BatchActiveLearning",
+      "parent_class": "BatchModeActiveLearning",
+      "comment": "Represents generic batch-based active learning procedures."
+    },
+    {
+      "class_name": "BatchBasedQuerying",
+      "parent_class": "BatchModeActiveLearning",
+      "comment": "Represents methods that issue batch queries to the oracle."
+    },
+    {
+      "class_name": "BatchModeQuerySelection",
+      "parent_class": "BatchModeActiveLearning",
+      "comment": "Represents algorithms that select batches of queries per iteration."
+    },
+    {
+      "class_name": "BatchQuerySelection",
+      "parent_class": "BatchModeActiveLearning",
+      "comment": "Represents procedures for forming query batches."
+    },
+    {
+      "class_name": "BatchAw areStrategy",
+      "parent_class": "BatchModeActiveLearning",
+      "comment": "Represents acquisition strategies that account for intra-batch interactions."
+    },
+    {
+      "class_name": "NonBatchAwareStrategy",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents strategies that treat each instance independently when forming batches."
+    },
+    {
+      "class_name": "ActiveLearner",
+      "parent_class": "OtherConcept",
+      "comment": "Represents the learner or model participating in an active learning process."
+    },
+    {
+      "class_name": "ActiveLearningFramework",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents complete frameworks that orchestrate active learning components."
+    },
+    {
+      "class_name": "GeneralPurposeDeepActiveLearningFramework",
+      "parent_class": "ActiveLearningFramework",
+      "comment": "Represents general-purpose frameworks for deep active learning."
+    },
+    {
+      "class_name": "ActiveLearningEvaluationFramework",
+      "parent_class": "ActiveLearningFramework",
+      "comment": "Represents frameworks designed to evaluate active learning methods."
+    },
+    {
+      "class_name": "SemiSupervisedActiveLearningFramework",
+      "parent_class": "ActiveLearningFramework",
+      "comment": "Represents frameworks combining semi-supervised learning and active learning."
+    },
+    {
+      "class_name": "ActiveLearningQueryStrategy",
+      "parent_class": "AcquisitionStrategy",
+      "comment": "Represents query strategies used to choose which instances to label."
+    },
+    {
+      "class_name": "QueryStrategy",
+      "parent_class": "ActiveLearningQueryStrategy",
+      "comment": "Represents algorithmic rules for selecting query candidates."
+    },
+    {
+      "class_name": "ModelDrivenQueryStrategy",
+      "parent_class": "QueryStrategy",
+      "comment": "Represents query strategies driven primarily by model-centric signals."
+    },
+    {
+      "class_name": "DataDrivenQueryStrategy",
+      "parent_class": "QueryStrategy",
+      "comment": "Represents query strategies driven by data structure or distribution."
+    },
+    {
+      "class_name": "PredictionBasedQueryStrategy",
+      "parent_class": "QueryStrategy",
+      "comment": "Represents query strategies that rely on model predictions."
+    },
+    {
+      "class_name": "InformationBasedQueryStrategy",
+      "parent_class": "QueryStrategy",
+      "comment": "Represents query strategies based on information-theoretic measures."
+    },
+    {
+      "class_name": "InformativenessBasedQueryStrategy",
+      "parent_class": "QueryStrategy",
+      "comment": "Represents query strategies based on sample informativeness."
+    },
+    {
+      "class_name": "UncertaintyBasedQueryStrategy",
+      "parent_class": "QueryStrategy",
+      "comment": "Represents query strategies based on uncertainty criteria."
+    },
+    {
+      "class_name": "DisagreementBasedQueryStrategy",
+      "parent_class": "QueryStrategy",
+      "comment": "Represents query strategies relying on committee or model disagreement."
+    },
+    {
+      "class_name": "OptimalDesignQueryStrategy",
+      "parent_class": "QueryStrategy",
+      "comment": "Represents query strategies based on optimal experimental design principles."
+    },
+    {
+      "class_name": "QueryFunction",
+      "parent_class": "Method",
+      "comment": "Represents functions that map candidate instances to acquisition scores."
+    },
+    {
+      "class_name": "QuerySelection",
+      "parent_class": "Method",
+      "comment": "Represents the process of selecting queries based on scoring functions."
+    },
+    {
+      "class_name": "QuerySelectionMethod",
+      "parent_class": "QuerySelection",
+      "comment": "Represents specific algorithms for selecting queries."
+    },
+    {
+      "class_name": "QuerySelectionMethod",
+      "parent_class": "QuerySelection",
+      "comment": "Represents specific query selection algorithms."
+    },
+    {
+      "class_name": "QueryByCommittee",
+      "parent_class": "DisagreementBasedQueryStrategy",
+      "comment": "Represents classic committee-based active learning methods."
+    },
+    {
+      "class_name": "QueryByCommitteeStrategy",
+      "parent_class": "QueryByCommittee",
+      "comment": "Represents strategy formulations of query-by-committee."
+    },
+    {
+      "class_name": "CommitteeBasedActiveLearning",
+      "parent_class": "DisagreementBasedQueryStrategy",
+      "comment": "Represents active learning methods using committees of models for disagreement."
+    },
+    {
+      "class_name": "CommitteeDisagreementStrategy",
+      "parent_class": "DisagreementBasedQueryStrategy",
+      "comment": "Represents strategies that measure and exploit disagreement between committee members."
+    },
+    {
+      "class_name": "CommitteeDisagreement",
+      "parent_class": "DisagreementBasedQueryStrategy",
+      "comment": "Represents the disagreement signal used in committee-based methods."
+    },
+    {
+      "class_name": "DisagreementBasedActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods driven by disagreement between models or hypotheses."
+    },
+    {
+      "class_name": "DisagreementBasedSelection",
+      "parent_class": "DisagreementBasedActiveLearning",
+      "comment": "Represents selection methods based on model disagreement."
+    },
+    {
+      "class_name": "DisagreementBasedQueryRules",
+      "parent_class": "DisagreementBasedActiveLearning",
+      "comment": "Represents rule-based formulations of disagreement-based querying."
+    },
+    {
+      "class_name": "DisagreementBasedCriterion",
+      "parent_class": "DisagreementBasedActiveLearning",
+      "comment": "Represents criteria to quantify disagreement for active learning."
+    },
+    {
+      "class_name": "DensityBasedActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods that use density or cluster structure."
+    },
+    {
+      "class_name": "DensityBasedSampling",
+      "parent_class": "DensityBasedActiveLearning",
+      "comment": "Represents sampling strategies that prefer high-density or representative regions."
+    },
+    {
+      "class_name": "DensityBasedAcquisitionMethod",
+      "parent_class": "DensityBasedActiveLearning",
+      "comment": "Represents acquisition methods driven by data density."
+    },
+    {
+      "class_name": "DensityBasedAcquisition",
+      "parent_class": "DensityBasedActiveLearning",
+      "comment": "Represents acquisition procedures that consider instance density."
+    },
+    {
+      "class_name": "DensityBasedRepresentationActiveLearning",
+      "parent_class": "DensityBasedActiveLearning",
+      "comment": "Represents density-based methods that operate in learned representation space."
+    },
+    {
+      "class_name": "CoreSetStrategy",
+      "parent_class": "RepresentativenessBasedActiveLearning",
+      "comment": "Represents strategies that select core-sets approximating the data distribution."
+    },
+    {
+      "class_name": "CoreSetActiveLearning",
+      "parent_class": "CoreSetStrategy",
+      "comment": "Represents active learning methods based on core-set selection."
+    },
+    {
+      "class_name": "CoreSetActiveLearningMethod",
+      "parent_class": "CoreSetStrategy",
+      "comment": "Represents concrete algorithmic implementations of core-set active learning."
+    },
+    {
+      "class_name": "CoreSetSelection",
+      "parent_class": "CoreSetStrategy",
+      "comment": "Represents the selection process for core-set based methods."
+    },
+    {
+      "class_name": "TypiClustStrategy",
+      "parent_class": "RepresentativenessBasedActiveLearning",
+      "comment": "Represents the TypiClust clustering-based active learning strategy."
+    },
+    {
+      "class_name": "TypiClustAlgorithm",
+      "parent_class": "TypiClustStrategy",
+      "comment": "Represents algorithmic implementations of TypiClust."
+    },
+    {
+      "class_name": "ClusteringBasedActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods that rely on clustering."
+    },
+    {
+      "class_name": "ClusteringForDiversityMethod",
+      "parent_class": "ClusteringBasedActiveLearning",
+      "comment": "Represents methods that use clustering specifically to promote diversity."
+    },
+    {
+      "class_name": "RegionBasedPointCloudActiveLearning",
+      "parent_class": "ClusteringBasedActiveLearning",
+      "comment": "Represents region-based clustering methods for active learning on point clouds."
+    },
+    {
+      "class_name": "RandomSampling",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents random sampling baselines for active learning."
+    },
+    {
+      "class_name": "RandomSamplingBaseline",
+      "parent_class": "RandomSampling",
+      "comment": "Represents specific baseline protocols using random sampling."
+    },
+    {
+      "class_name": "RandomSamplingMethod",
+      "parent_class": "RandomSampling",
+      "comment": "Represents algorithmic implementations of random sampling."
+    },
+    {
+      "class_name": "HybridActiveLearningStrategy",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents methods that combine multiple selection criteria, e.g., uncertainty and diversity."
+    },
+    {
+      "class_name": "HybridQueryStrategy",
+      "parent_class": "HybridActiveLearningStrategy",
+      "comment": "Represents query strategies that integrate heterogeneous signals."
+    },
+    {
+      "class_name": "HybridSamplingStrategy",
+      "parent_class": "HybridActiveLearningStrategy",
+      "comment": "Represents sampling strategies that combine different acquisition cues."
+    },
+    {
+      "class_name": "ActiveLearningTaxonomy",
+      "parent_class": "OtherConcept",
+      "comment": "Represents taxonomical structures used to categorize active learning approaches."
+    },
+    {
+      "class_name": "DeepActiveLearningTaxonomy",
+      "parent_class": "ActiveLearningTaxonomy",
+      "comment": "Represents taxonomies specifically for deep active learning methods."
+    },
+    {
+      "class_name": "OnlineActiveLearningTaxonomy",
+      "parent_class": "ActiveLearningTaxonomy",
+      "comment": "Represents taxonomies for online or streaming active learning scenarios."
+    },
+    {
+      "class_name": "DeepActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods built on deep neural networks."
+    },
+    {
+      "class_name": "DeepActiveLearningMethod",
+      "parent_class": "DeepActiveLearning",
+      "comment": "Represents specific deep active learning algorithms."
+    },
+    {
+      "class_name": "DeepActiveLearningStrategy",
+      "parent_class": "DeepActiveLearning",
+      "comment": "Represents strategic formulations of deep active learning approaches."
+    },
+    {
+      "class_name": "DeepBatchModeActiveLearning",
+      "parent_class": "DeepActiveLearning",
+      "comment": "Represents deep active learning methods operating in batch mode."
+    },
+    {
+      "class_name": "DeepActiveLearningForMedicalImaging",
+      "parent_class": "DeepActiveLearning",
+      "comment": "Represents deep active learning methods tailored to medical imaging tasks."
+    },
+    {
+      "class_name": "StreamingDeepActiveLearning",
+      "parent_class": "DeepActiveLearning",
+      "comment": "Represents deep active learning methods designed for data streams."
+    },
+    {
+      "class_name": "DeepActiveLearningWithoutTransfer",
+      "parent_class": "DeepActiveLearning",
+      "comment": "Represents deep active learning settings without transfer learning."
+    },
+    {
+      "class_name": "DeepTransferActiveLearning",
+      "parent_class": "DeepActiveLearning",
+      "comment": "Represents deep active learning methods that leverage transfer learning."
+    },
+    {
+      "class_name": "HybridDeepActiveLearningSampling",
+      "parent_class": "DeepActiveLearning",
+      "comment": "Represents hybrid sampling procedures within deep active learning."
+    },
+    {
+      "class_name": "BayesianDeepActiveLearning",
+      "parent_class": "DeepActiveLearning",
+      "comment": "Represents deep active learning methods grounded in Bayesian principles."
+    },
+    {
+      "class_name": "BayesianActiveLearning",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods rooted in Bayesian decision theory."
+    },
+    {
+      "class_name": "BayesianUncertaintyBasedActiveLearning",
+      "parent_class": "BayesianActiveLearning",
+      "comment": "Represents Bayesian active learning methods that use uncertainty for acquisition."
+    },
+    {
+      "class_name": "DeepBayesianActiveLearning",
+      "parent_class": "BayesianDeepActiveLearning",
+      "comment": "Represents deep neural active learning methods using approximate Bayesian inference."
+    },
+    {
+      "class_name": "BayesianDeepLearning",
+      "parent_class": "Method",
+      "comment": "Represents deep learning methods that incorporate Bayesian inference."
+    },
+    {
+      "class_name": "GenerativeModel",
+      "parent_class": "Method",
+      "comment": "Represents generative models that capture data distributions."
+    },
+    {
+      "class_name": "DeepGenerativeModel",
+      "parent_class": "GenerativeModel",
+      "comment": "Represents deep learning-based generative models."
+    },
+    {
+      "class_name": "DeepGenerativeModels",
+      "parent_class": "DeepGenerativeModel",
+      "comment": "Represents the family of deep generative modeling approaches."
+    },
+    {
+      "class_name": "GenerativeAdversarialNetwork",
+      "parent_class": "GenerativeModel",
+      "comment": "Represents generative adversarial network architectures."
+    },
+    {
+      "class_name": "GenerativeAdversarialNetworks",
+      "parent_class": "GenerativeAdversarialNetwork",
+      "comment": "Represents GAN-based methods considered as a family."
+    },
+    {
+      "class_name": "GANModel",
+      "parent_class": "GenerativeAdversarialNetwork",
+      "comment": "Represents a specific GAN-based generative model."
+    },
+    {
+      "class_name": "VariationalAutoencoder",
+      "parent_class": "GenerativeModel",
+      "comment": "Represents variational autoencoder (VAE) generative models."
+    },
+    {
+      "class_name": "VariationalAutoencoderModel",
+      "parent_class": "VariationalAutoencoder",
+      "comment": "Represents particular VAE model instances."
+    },
+    {
+      "class_name": "InfoVAEModel",
+      "parent_class": "VariationalAutoencoderModel",
+      "comment": "Represents InfoVAE variants used in active learning."
+    },
+    {
+      "class_name": "VaeAcganModel",
+      "parent_class": "DeepGenerativeModel",
+      "comment": "Represents combined VAE-ACGAN generative models."
+    },
+    {
+      "class_name": "VaeAcganGenerativeModel",
+      "parent_class": "VaeAcganModel",
+      "comment": "Represents VAE-ACGAN models specifically used for query synthesis."
+    },
+    {
+      "class_name": "Autoencoder",
+      "parent_class": "DeepGenerativeModel",
+      "comment": "Represents autoencoder models used for representation learning or data generation."
+    },
+    {
+      "class_name": "MembershipQuerySynthesis",
+      "parent_class": "ActiveLearningMethod",
+      "comment": "Represents active learning methods that synthesize new query instances."
+    },
+    {
+      "class_name": "GenerativeActiveLearning",
+      "parent_class": "MembershipQuerySynthesis",
+      "comment": "Represents active learning methods using generative models for query synthesis."
+    },
+    {
+      "class_name": "GenerativeAdversarialActiveLearning",
+      "parent_class": "GenerativeActiveLearning",
+      "comment": "Represents generative adversarial active learning methods."
+    },
+    {
+      "class_name": "BayesianGenerativeActiveDeepLearning",
+      "parent_class": "GenerativeActiveLearning",
+      "comment": "Represents deep active learning methods that are both generative and Bayesian."
+    },
+    {
+      "class_name": "BayesianDataAugmentation",
+      "parent_class": "GenerativeActiveLearning",
+      "comment": "Represents Bayesian approaches to generate augmented data for active learning."
+    },
+    {
+      "class_name": "EfficientCganActiveLearning",
+      "parent_class": "GenerativeAdversarialActiveLearning",
+      "comment": "Represents CGAN-based efficient active learning strategies."
+    },
+    {
+      "class_name": "GaalActiveLearning",
+      "parent_class": "GenerativeAdversarialActiveLearning",
+      "comment": "Represents GAN-based active learning (GAAL) methods."
+    },
+    {
+      "class_name": "GAALMethod",
+      "parent_class": "GaalActiveLearning",
+      "comment": "Represents specific algorithmic implementations of GAAL."
+    },
+    {
+      "class_name": "GenerativeActiveLearning",
+      "parent_class": "MembershipQuerySynthesis",
+      "comment": "Represents generative model-based active learning methods."
+    },
+    {
+      "class_name": "QueryBySynthesis",
+      "parent_class": "MembershipQuerySynthesis",
+      "comment": "Represents active learning methods that synthesize artificial queries."
+    },
+    {
+      "class_name": "SyntheticQueryGeneration",
+      "parent_class": "MembershipQuerySynthesis",
+      "comment": "Represents procedures that generate synthetic queries for labeling."
+    },
+    {
+      "class_name": "OracleAnnotation",
+      "parent_class": "Method",
+      "comment": "Represents methods that request labels from an oracle annotator."
+    },
+    {
+      "class_name": "AnnotationProcess",
+      "parent_class": "Task",
+      "comment": "Represents tasks describing the annotation of data by humans or oracles."
+    },
+    {
+      "class_name": "AnnotationAction",
+      "parent_class": "Method",
+      "comment": "Represents atomic annotation actions taken by annotators."
+    },
+    {
+      "class_name": "Annotation",
+      "parent_class": "OtherConcept",
+      "comment": "Represents annotation objects linking data to labels or structures."
+    },
+    {
+      "class_name": "AnnotationBudget",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints on the total annotation budget."
+    },
+    {
+      "class_name": "AnnotationBudgetConstraint",
+      "parent_class": "AnnotationBudget",
+      "comment": "Represents explicit constraints on budget for annotation in experiments."
+    },
+    {
+      "class_name": "BudgetConstraint",
+      "parent_class": "AnnotationBudgetConstraint",
+      "comment": "Represents generic budget constraints on labeling or computation."
+    },
+    {
+      "class_name": "LabelingBudget",
+      "parent_class": "AnnotationBudgetConstraint",
+      "comment": "Represents constraints on the fraction or number of labels that can be acquired."
+    },
+    {
+      "class_name": "LowBudgetRegimeConstraint",
+      "parent_class": "AnnotationBudgetConstraint",
+      "comment": "Represents constraints reflecting operation under very low labeling budgets."
+    },
+    {
+      "class_name": "HighBudgetRegime",
+      "parent_class": "Constraint",
+      "comment": "Represents settings with relatively high available annotation budgets."
+    },
+    {
+      "class_name": "AnnotationCost",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints associated with the cost of annotation."
+    },
+    {
+      "class_name": "AnnotationCostConstraint",
+      "parent_class": "AnnotationCost",
+      "comment": "Represents explicit constraints modeling annotation cost."
+    },
+    {
+      "class_name": "HeterogeneousAnnotationCost",
+      "parent_class": "AnnotationCostConstraint",
+      "comment": "Represents constraints where annotation cost varies across instances or labels."
+    },
+    {
+      "class_name": "LabelingCost",
+      "parent_class": "AnnotationCostConstraint",
+      "comment": "Represents constraints on cost per label acquisition."
+    },
+    {
+      "class_name": "WorkerAnnotationCost",
+      "parent_class": "AnnotationCostConstraint",
+      "comment": "Represents annotation cost linked to particular workers in crowdsourcing."
+    },
+    {
+      "class_name": "AnnotationEffort",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints that model human annotation effort."
+    },
+    {
+      "class_name": "AnnotationEffortConstraint",
+      "parent_class": "AnnotationEffort",
+      "comment": "Represents explicit constraints on human annotation effort."
+    },
+    {
+      "class_name": "ExpertAnnotationEffort",
+      "parent_class": "AnnotationEffortConstraint",
+      "comment": "Represents annotation effort constraints when using expert annotators."
+    },
+    {
+      "class_name": "AnnotationTimeConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints on the wall-clock time available for annotation."
+    },
+    {
+      "class_name": "AnnotationRoundsConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints on the number of annotation rounds in active learning."
+    },
+    {
+      "class_name": "RedundantLabelingConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints discouraging or limiting redundant labels."
+    },
+    {
+      "class_name": "RedundantAnnotations",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints on repeated annotations for the same example."
+    },
+    {
+      "class_name": "AnnotationVariabilityConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints related to variability between annotators."
+    },
+    {
+      "class_name": "InterAnnotatorVariability",
+      "parent_class": "AnnotationVariabilityConstraint",
+      "comment": "Represents variability of annotations across different annotators."
+    },
+    {
+      "class_name": "IntraAnnotatorVariability",
+      "parent_class": "AnnotationVariabilityConstraint",
+      "comment": "Represents variability within a single annotator over time."
+    },
+    {
+      "class_name": "LabelQualityConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints that enforce or assume particular label quality."
+    },
+    {
+      "class_name": "LabelScarcityConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints modeling scarcity of labeled data."
+    },
+    {
+      "class_name": "DataScarcityConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints reflecting limited data availability, especially labels."
+    },
+    {
+      "class_name": "LowLabelRegime",
+      "parent_class": "Constraint",
+      "comment": "Represents settings where only a small number of labels are available."
+    },
+    {
+      "class_name": "ClassImbalance",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints or phenomena caused by imbalanced class distributions."
+    },
+    {
+      "class_name": "ClassImbalanceConstraint",
+      "parent_class": "ClassImbalance",
+      "comment": "Represents explicit constraints on class imbalance in datasets."
+    },
+    {
+      "class_name": "ImbalancedClassesConstraint",
+      "parent_class": "ClassImbalanceConstraint",
+      "comment": "Represents constraints describing imbalanced classes."
+    },
+    {
+      "class_name": "RareClassImbalanceConstraint",
+      "parent_class": "ClassImbalanceConstraint",
+      "comment": "Represents constraints for rare but clinically important classes."
+    },
+    {
+      "class_name": "StrongClassImbalance",
+      "parent_class": "ClassImbalanceConstraint",
+      "comment": "Represents settings of severe class imbalance."
+    },
+    {
+      "class_name": "LowResourceSetting",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints capturing low-resource scenarios for data or computation."
+    },
+    {
+      "class_name": "LowResourceSettingConstraint",
+      "parent_class": "LowResourceSetting",
+      "comment": "Represents explicit constraints formalizing low-resource settings."
+    },
+    {
+      "class_name": "SelectionBias",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints or problems induced by biased selection of training data."
+    },
+    {
+      "class_name": "DataBiasConstraint",
+      "parent_class": "SelectionBias",
+      "comment": "Represents constraints that arise from biased data collections."
+    },
+    {
+      "class_name": "StationarityAssumption",
+      "parent_class": "Constraint",
+      "comment": "Represents assumptions that data distribution is stationary over time."
+    },
+    {
+      "class_name": "StationaryDataDistribution",
+      "parent_class": "StationarityAssumption",
+      "comment": "Represents constraints requiring a stationary data distribution."
+    },
+    {
+      "class_name": "NonStationaryDataDistribution",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints acknowledging that data distributions change over time."
+    },
+    {
+      "class_name": "StreamingSettings",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints specific to streaming data scenarios."
+    },
+    {
+      "class_name": "StreamingObservationTargetFraction",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints on the fraction of streaming observations that can be labeled."
+    },
+    {
+      "class_name": "ComputationalCostConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints on computational cost of active learning procedures."
+    },
+    {
+      "class_name": "ComputationalConstraint",
+      "parent_class": "ComputationalCostConstraint",
+      "comment": "Represents general computational resource constraints."
+    },
+    {
+      "class_name": "ComputationalEfficiencyConstraint",
+      "parent_class": "ComputationalCostConstraint",
+      "comment": "Represents constraints emphasizing efficiency of computation."
+    },
+    {
+      "class_name": "AcquisitionLatency",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints on latency incurred by acquisition strategies."
+    },
+    {
+      "class_name": "RealTimeConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents strict constraints that methods must operate in real time."
+    },
+    {
+      "class_name": "MedicalAnnotationConstraints",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints arising from medical annotation workflows."
+    },
+    {
+      "class_name": "DensePixelLevelAnnotationConstraint",
+      "parent_class": "MedicalAnnotationConstraints",
+      "comment": "Represents constraints where dense pixel-level annotations are required."
+    },
+    {
+      "class_name": "Dataset",
+      "parent_class": "owl:Thing",
+      "comment": "Root dataset class used as anchor for all concrete datasets and dataset subsets."
+    },
+    {
+      "class_name": "MedicalImageDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets containing medical images."
+    },
+    {
+      "class_name": "MedicalImagingData",
+      "parent_class": "MedicalImageDataset",
+      "comment": "Represents generic medical imaging data used in learning tasks."
+    },
+    {
+      "class_name": "ThreeDMedicalImagingData",
+      "parent_class": "MedicalImagingData",
+      "comment": "Represents 3D medical imaging datasets such as CT or MRI volumes."
+    },
+    {
+      "class_name": "VolumetricMedicalScan",
+      "parent_class": "ThreeDMedicalImagingData",
+      "comment": "Represents volumetric medical scans used as 3D inputs."
+    },
+    {
+      "class_name": "3DVolume",
+      "parent_class": "ThreeDMedicalImagingData",
+      "comment": "Represents generic 3D volumes in medical imaging."
+    },
+    {
+      "class_name": "ThreeDimensionalCtMriVolumes",
+      "parent_class": "ThreeDMedicalImagingData",
+      "comment": "Represents CT and MRI volume datasets used in segmentation and diagnosis."
+    },
+    {
+      "class_name": "CTImaging",
+      "parent_class": "MedicalImagingData",
+      "comment": "Represents datasets comprising CT imaging data."
+    },
+    {
+      "class_name": "MRIImaging",
+      "parent_class": "MedicalImagingData",
+      "comment": "Represents datasets comprising MRI imaging data."
+    },
+    {
+      "class_name": "CTModality",
+      "parent_class": "CTImaging",
+      "comment": "Represents CT modality-specific dataset views."
+    },
+    {
+      "class_name": "MRIModality",
+      "parent_class": "MRIImaging",
+      "comment": "Represents MRI modality-specific dataset views."
+    },
+    {
+      "class_name": "MedicalXrayImaging",
+      "parent_class": "MedicalImagingData",
+      "comment": "Represents X-ray imaging datasets."
+    },
+    {
+      "class_name": "ChestXRayImageData",
+      "parent_class": "MedicalXrayImaging",
+      "comment": "Represents chest X-ray image datasets."
+    },
+    {
+      "class_name": "MedicalImagingDatasets",
+      "parent_class": "MedicalImageDataset",
+      "comment": "Represents the collection of datasets used in medical imaging research."
+    },
+    {
+      "class_name": "MedicalImagingBenchmarks",
+      "parent_class": "MedicalImageDataset",
+      "comment": "Represents benchmark datasets in the medical imaging domain."
+    },
+    {
+      "class_name": "3DMedicalImageSegmentationBenchmarks",
+      "parent_class": "MedicalImagingBenchmarks",
+      "comment": "Represents benchmark collections for 3D medical image segmentation."
+    },
+    {
+      "class_name": "SegmentationBenchmarkDataset",
+      "parent_class": "MedicalImagingBenchmarks",
+      "comment": "Represents datasets used as benchmarks for segmentation tasks."
+    },
+    {
+      "class_name": "ImageClassificationDatasets",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets used for image classification benchmarks."
+    },
+    {
+      "class_name": "ImageClassificationBenchmarks",
+      "parent_class": "ImageClassificationDatasets",
+      "comment": "Represents benchmark datasets for image classification."
+    },
+    {
+      "class_name": "ImageNetDataset",
+      "parent_class": "ImageClassificationDatasets",
+      "comment": "Represents the ImageNet dataset."
+    },
+    {
+      "class_name": "CIFAR10Dataset",
+      "parent_class": "ImageClassificationDatasets",
+      "comment": "Represents the CIFAR-10 dataset."
+    },
+    {
+      "class_name": "SmallDatasets",
+      "parent_class": "Dataset",
+      "comment": "Represents small-scale datasets typically used in low-data studies."
+    },
+    {
+      "class_name": "LargeLabeledDatasets",
+      "parent_class": "Dataset",
+      "comment": "Represents large datasets with extensive labels."
+    },
+    {
+      "class_name": "LargeWellAnnotatedDatasets",
+      "parent_class": "LargeLabeledDatasets",
+      "comment": "Represents large datasets with high-quality detailed annotations."
+    },
+    {
+      "class_name": "LargeUnlabeledDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents large datasets lacking labels."
+    },
+    {
+      "class_name": "UnlabeledData",
+      "parent_class": "Dataset",
+      "comment": "Represents collections of unlabeled examples."
+    },
+    {
+      "class_name": "UnlabeledDataset",
+      "parent_class": "UnlabeledData",
+      "comment": "Represents datasets where most or all examples are unlabeled."
+    },
+    {
+      "class_name": "UnlabeledPool",
+      "parent_class": "UnlabeledDataset",
+      "comment": "Represents the pool of unlabeled data available for selection."
+    },
+    {
+      "class_name": "UnlabeledDataPool",
+      "parent_class": "UnlabeledDataset",
+      "comment": "Represents a pool of unlabeled data considered by pool-based AL algorithms."
+    },
+    {
+      "class_name": "PoolOfUnlabeledData",
+      "parent_class": "UnlabeledDataset",
+      "comment": "Represents the unlabeled pool in active learning experiments."
+    },
+    {
+      "class_name": "UnlabeledPoolDataset",
+      "parent_class": "UnlabeledDataset",
+      "comment": "Represents a dataset notion for the unlabeled pool."
+    },
+    {
+      "class_name": "UnlabeledCandidatePool",
+      "parent_class": "UnlabeledDataset",
+      "comment": "Represents candidate unlabeled instances from which queries are drawn."
+    },
+    {
+      "class_name": "LabeledData",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets where examples have associated labels."
+    },
+    {
+      "class_name": "LabeledDataset",
+      "parent_class": "LabeledData",
+      "comment": "Represents an explicitly labeled dataset."
+    },
+    {
+      "class_name": "LabeledSampleSet",
+      "parent_class": "LabeledData",
+      "comment": "Represents a set of labeled samples."
+    },
+    {
+      "class_name": "LabeledSet",
+      "parent_class": "LabeledData",
+      "comment": "Represents the labeled portion of a dataset."
+    },
+    {
+      "class_name": "LabeledSubset",
+      "parent_class": "LabeledData",
+      "comment": "Represents a subset of labeled samples from a dataset."
+    },
+    {
+      "class_name": "LabeledSampleSet",
+      "parent_class": "LabeledData",
+      "comment": "Represents a set of labeled samples used in training or evaluation."
+    },
+    {
+      "class_name": "LabeledSourceDataset",
+      "parent_class": "LabeledData",
+      "comment": "Represents labeled datasets from the source domain."
+    },
+    {
+      "class_name": "LabeledSourceData",
+      "parent_class": "LabeledSourceDataset",
+      "comment": "Represents labeled source-domain examples."
+    },
+    {
+      "class_name": "InitialLabeledSet",
+      "parent_class": "LabeledData",
+      "comment": "Represents the initial labeled set used to seed active learning."
+    },
+    {
+      "class_name": "InitialLabeledPool",
+      "parent_class": "LabeledData",
+      "comment": "Represents the initial labeled pool or seed dataset."
+    },
+    {
+      "class_name": "InitialLabeledSeedSet",
+      "parent_class": "LabeledData",
+      "comment": "Represents a small seed set of labeled examples."
+    },
+    {
+      "class_name": "HistoricalLabeledData",
+      "parent_class": "LabeledData",
+      "comment": "Represents previously collected labeled data."
+    },
+    {
+      "class_name": "TrainingDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents the dataset used for training a model."
+    },
+    {
+      "class_name": "TrainingSet",
+      "parent_class": "TrainingDataset",
+      "comment": "Represents the training set subset of a dataset."
+    },
+    {
+      "class_name": "HoldoutTestSet",
+      "parent_class": "Dataset",
+      "comment": "Represents a hold-out test set for evaluation."
+    },
+    {
+      "class_name": "TestSet",
+      "parent_class": "Dataset",
+      "comment": "Represents generic test sets used for evaluation."
+    },
+    {
+      "class_name": "DataStreamDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets that are realized as data streams."
+    },
+    {
+      "class_name": "DataStream",
+      "parent_class": "DataStreamDataset",
+      "comment": "Represents generic data streams for streaming learning."
+    },
+    {
+      "class_name": "RealDataStream",
+      "parent_class": "DataStreamDataset",
+      "comment": "Represents real-world data streams."
+    },
+    {
+      "class_name": "ConceptDriftingDataStream",
+      "parent_class": "DataStreamDataset",
+      "comment": "Represents data streams with concept drift."
+    },
+    {
+      "class_name": "UnlabeledDataStream",
+      "parent_class": "DataStreamDataset",
+      "comment": "Represents unlabeled data arriving in a stream."
+    },
+    {
+      "class_name": "DeepActiveLearningBenchmark",
+      "parent_class": "DatasetCollection",
+      "comment": "Represents collections of datasets used to benchmark deep active learning methods."
+    },
+    {
+      "class_name": "DatasetCollection",
+      "parent_class": "Dataset",
+      "comment": "Represents a collection or suite of datasets."
+    },
+    {
+      "class_name": "SurveyBasedActiveLearningBenchmarks",
+      "parent_class": "DatasetCollection",
+      "comment": "Represents benchmark collections compiled in survey-based studies."
+    },
+    {
+      "class_name": "ISIC2020Dataset",
+      "parent_class": "MedicalImageDataset",
+      "comment": "Represents the ISIC 2020 skin lesion dataset."
+    },
+    {
+      "class_name": "BreakHisDataset",
+      "parent_class": "MedicalImageDataset",
+      "comment": "Represents the BreakHis breast histopathology dataset."
+    },
+    {
+      "class_name": "NCTCRCHE100KDataset",
+      "parent_class": "MedicalImageDataset",
+      "comment": "Represents the NCT-CRC-HE-100K colorectal histology dataset."
+    },
+    {
+      "class_name": "PneumoniaMNISTDataset",
+      "parent_class": "MedicalImageDataset",
+      "comment": "Represents the Pneumonia-MNIST chest X-ray dataset."
+    },
+    {
+      "class_name": "TyrogueDataset",
+      "parent_class": "ImageClassificationDatasets",
+      "comment": "Represents the Tyrogue dataset used in some AL benchmarks."
+    },
+    {
+      "class_name": "AVIRISIndianPinesDataset",
+      "parent_class": "HyperspectralRemoteSensingData",
+      "comment": "Represents the AVIRIS Indian Pines hyperspectral dataset."
+    },
+    {
+      "class_name": "ROSISPaviaDataset",
+      "parent_class": "HyperspectralRemoteSensingData",
+      "comment": "Represents the ROSIS Pavia hyperspectral dataset."
+    },
+    {
+      "class_name": "AvirisImages",
+      "parent_class": "HyperspectralRemoteSensingData",
+      "comment": "Represents AVIRIS hyperspectral images."
+    },
+    {
+      "class_name": "HyperspectralRemoteSensingData",
+      "parent_class": "Dataset",
+      "comment": "Represents hyperspectral remote sensing image datasets."
+    },
+    {
+      "class_name": "ImagePatchData",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets consisting of image patches."
+    },
+    {
+      "class_name": "ImagePatches",
+      "parent_class": "ImagePatchData",
+      "comment": "Represents collections of small image patches."
+    },
+    {
+      "class_name": "ImageRegion",
+      "parent_class": "ImagePatchData",
+      "comment": "Represents spatial regions cut from larger images."
+    },
+    {
+      "class_name": "ImageSlice",
+      "parent_class": "Dataset",
+      "comment": "Represents 2D slices extracted from 3D volumes."
+    },
+    {
+      "class_name": "TwoDimensionalSlices",
+      "parent_class": "ImageSlice",
+      "comment": "Represents two-dimensional slices of 3D medical data."
+    },
+    {
+      "class_name": "RegionsOfInterest",
+      "parent_class": "ImageRegion",
+      "comment": "Represents pre-defined or detected regions of interest in images."
+    },
+    {
+      "class_name": "FundusImages",
+      "parent_class": "MedicalImageDataset",
+      "comment": "Represents datasets of retinal fundus images."
+    },
+    {
+      "class_name": "ProductionLineSensors",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets containing sensor readings from production lines."
+    },
+    {
+      "class_name": "PointCloudDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets consisting of 3D point clouds."
+    },
+    {
+      "class_name": "VideoSegment",
+      "parent_class": "Dataset",
+      "comment": "Represents segments or clips extracted from videos."
+    },
+    {
+      "class_name": "ColonoscopyVideoData",
+      "parent_class": "Dataset",
+      "comment": "Represents video data from colonoscopy procedures."
+    },
+    {
+      "class_name": "ColonoscopyFrameData",
+      "parent_class": "Dataset",
+      "comment": "Represents individual video frames from colonoscopy videos."
+    },
+    {
+      "class_name": "NaturalImageDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets of natural images."
+    },
+    {
+      "class_name": "NaturalImageData",
+      "parent_class": "NaturalImageDataset",
+      "comment": "Represents natural image data points."
+    },
+    {
+      "class_name": "HumanTranslation",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets consisting of human translations."
+    },
+    {
+      "class_name": "HumanTranslationData",
+      "parent_class": "HumanTranslation",
+      "comment": "Represents specific instances of human-produced translations."
+    },
+    {
+      "class_name": "MachineTranslationData",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets of machine-generated translations."
+    },
+    {
+      "class_name": "CombinedMTHTDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents combined machine and human translation datasets."
+    },
+    {
+      "class_name": "ImageTextPairDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets of aligned image-text pairs."
+    },
+    {
+      "class_name": "OracleLabeledDataset",
+      "parent_class": "LabeledDataset",
+      "comment": "Represents datasets whose labels were obtained from an oracle annotator."
+    },
+    {
+      "class_name": "PseudoLabeledDataset",
+      "parent_class": "LabeledDataset",
+      "comment": "Represents datasets with labels assigned via pseudo-labeling."
+    },
+    {
+      "class_name": "OutOfDistributionData",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets containing out-of-distribution samples."
+    },
+    {
+      "class_name": "CleanInDistributionData",
+      "parent_class": "Dataset",
+      "comment": "Represents clean in-distribution data without outliers or noise."
+    },
+    {
+      "class_name": "SubsetOfObjectsDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents subsets of objects extracted from larger datasets."
+    },
+    {
+      "class_name": "DataSubsets",
+      "parent_class": "Dataset",
+      "comment": "Represents generic subsets of datasets."
+    },
+    {
+      "class_name": "StaticDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents static datasets that do not evolve over time."
+    },
+    {
+      "class_name": "QuerySet",
+      "parent_class": "Dataset",
+      "comment": "Represents the set of instances selected as queries."
+    },
+    {
+      "class_name": "QueryBatch",
+      "parent_class": "QuerySet",
+      "comment": "Represents a batch of queries issued in one iteration."
+    },
+    {
+      "class_name": "SubjectCohortDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets built around subject cohorts, such as patient groups."
+    },
+    {
+      "class_name": "TargetDataset",
+      "parent_class": "Dataset",
+      "comment": "Represents datasets from the target domain in domain adaptation."
+    },
+    {
+      "class_name": "DatasetSlice",
+      "parent_class": "Dataset",
+      "comment": "Represents subslices or partitions of a dataset."
+    },
+    {
+      "class_name": "DataSplit",
+      "parent_class": "DatasetSlice",
+      "comment": "Represents logical splits of datasets into train, validation, or test parts."
+    },
+    {
+      "class_name": "LabeledDatasetSplit",
+      "parent_class": "DataSplit",
+      "comment": "Represents labeled subsets from a dataset split."
+    },
+    {
+      "class_name": "UnlabeledDatasetSplit",
+      "parent_class": "DataSplit",
+      "comment": "Represents unlabeled subsets from a dataset split."
+    },
+    {
+      "class_name": "DatasetFractionConstraint",
+      "parent_class": "Constraint",
+      "comment": "Represents constraints that limit which fraction of a dataset can be labeled."
+    },
+    {
+      "class_name": "InfiniteInputSpace",
+      "parent_class": "OtherConcept",
+      "comment": "Represents an idealized infinite input space for theoretical analysis."
+    },
+    {
+      "class_name": "InputSpace",
+      "parent_class": "OtherConcept",
+      "comment": "Represents the space of possible input instances."
+    },
+    {
+      "class_name": "SampleSpace",
+      "parent_class": "OtherConcept",
+      "comment": "Represents a probabilistic sample space over inputs and labels."
+    },
+    {
+      "class_name": "DataSpace",
+      "parent_class": "OtherConcept",
+      "comment": "Represents a generic data space in which instances lie."
+    },
+    {
+      "class_name": "DataSpaceConcept",
+      "parent_class": "OtherConcept",
+      "comment": "Represents conceptual descriptions of the data space."
+    },
+    {
+      "class_name": "FeatureSpace",
+      "parent_class": "OtherConcept",
+      "comment": "Represents feature spaces in which inputs are embedded."
+    },
+    {
+      "class_name": "RepresentationSpace",
+      "parent_class": "OtherConcept",
+      "comment": "Represents learned representation spaces."
+    },
+    {
+      "class_name": "HypothesisSpace",
+      "parent_class": "OtherConcept",
+      "comment": "Represents the space of hypotheses or models considered by a learner."
+    },
+    {
+      "class_name": "VersionSpace",
+      "parent_class": "OtherConcept",
+      "comment": "Represents the subset of hypotheses consistent with observed data."
+    },
+    {
+      "class_name": "LabelSpace",
+      "parent_class": "OtherConcept",
+      "comment": "Represents the space of possible labels."
+    },
+    {
+      "class_name": "Uncertainty",
+      "parent_class": "Metric",
+      "comment": "Represents the general concept of uncertainty used in metrics."
+    },
+    {
+      "class_name": "UncertaintyMeasure",
+      "parent_class": "Uncertainty",
+      "comment": "Represents metrics that quantify uncertainty."
+    },
+    {
+      "class_name": "UncertaintyMetric",
+      "parent_class": "UncertaintyMeasure",
+      "comment": "Represents specific uncertainty metrics used in acquisition."
+    },
+    {
+      "class_name": "ModelUncertainty",
+      "parent_class": "UncertaintyMetric",
+      "comment": "Represents metrics that quantify model predictive uncertainty."
+    },
+    {
+      "class_name": "PredictionUncertainty",
+      "parent_class": "UncertaintyMetric",
+      "comment": "Represents uncertainty associated with individual predictions."
+    },
+    {
+      "class_name": "PredictionEntropy",
+      "parent_class": "UncertaintyMetric",
+      "comment": "Represents prediction entropy used as an uncertainty score."
+    },
+    {
+      "class_name": "PredictiveEntropy",
+      "parent_class": "PredictionEntropy",
+      "comment": "Represents predictive entropy metrics."
+    },
+    {
+      "class_name": "PredictiveEntropyMetric",
+      "parent_class": "PredictionEntropy",
+      "comment": "Represents specific numeric predictive entropy measures."
+    },
+    {
+      "class_name": "Entropy",
+      "parent_class": "UncertaintyMetric",
+      "comment": "Represents Shannon entropy used as an uncertainty measure."
+    },
+    {
+      "class_name": "EntropyMetric",
+      "parent_class": "Entropy",
+      "comment": "Represents metrics that compute entropy-based scores."
+    },
+    {
+      "class_name": "EntropyMeasure",
+      "parent_class": "Entropy",
+      "comment": "Represents generic entropy-based measures."
+    },
+    {
+      "class_name": "EntropyBasedUncertainty",
+      "parent_class": "UncertaintyMetric",
+      "comment": "Represents uncertainty measures derived from entropy."
+    },
+    {
+      "class_name": "EntropyUncertainty",
+      "parent_class": "EntropyBasedUncertainty",
+      "comment": "Represents generic entropy-based uncertainty scores."
+    },
+    {
+      "class_name": "EdgeBasedEntropy",
+      "parent_class": "EntropyMetric",
+      "comment": "Represents entropy metrics computed over image edges or boundaries."
+    },
+    {
+      "class_name": "VariationRatio",
+      "parent_class": "UncertaintyMetric",
+      "comment": "Represents variation-ratio based uncertainty metrics."
+    },
+    {
+      "class_name": "LeastConfidence",
+      "parent_class": "UncertaintyMetric",
+      "comment": "Represents metrics measuring least confident predictions."
+    },
+    {
+      "class_name": "LeastConfidenceMetric",
+      "parent_class": "LeastConfidence",
+      "comment": "Represents numeric least-confidence scores."
+    },
+    {
+      "class_name": "LeastConfidenceScore",
+      "parent_class": "LeastConfidenceMetric",
+      "comment": "Represents specific computed least-confidence scores."
+    },
+    {
+      "class_name": "Margin",
+      "parent_class": "Metric",
+      "comment": "Represents margin-based quantities used as metrics."
+    },
+    {
+      "class_name": "MarginMetric",
+      "parent_class": "Margin",
+      "comment": "Represents numeric metrics based on prediction margins."
+    },
+    {
+      "class_name": "MarginUncertaintyScore",
+      "parent_class": "MarginMetric",
+      "comment": "Represents uncertainty scores defined via margins."
+    },
+    {
+      "class_name": "MarginBasedUncertainty",
+      "parent_class": "UncertaintyMetric",
+      "comment": "Represents uncertainty metrics defined through decision margins."
+    },
+    {
+      "class_name": "MarginBasedUncertaintyMetric",
+      "parent_class": "MarginBasedUncertainty",
+      "comment": "Represents numeric margin-based uncertainty metrics."
+    },
+    {
+      "class_name": "VoteEntropy",
+      "parent_class": "UncertaintyMetric",
+      "comment": "Represents vote-entropy metrics used with committees."
+    },
+    {
+      "class_name": "KullbackLeiblerDivergence",
+      "parent_class": "Metric",
+      "comment": "Represents KL divergence metrics."
+    },
+    {
+      "class_name": "KLDivergence",
+      "parent_class": "KullbackLeiblerDivergence",
+      "comment": "Represents KL divergence as used in active learning metrics."
+    },
+    {
+      "class_name": "JensenShannonDivergence",
+      "parent_class": "Metric",
+      "comment": "Represents Jensen–Shannon divergence metrics."
+    },
+    {
+      "class_name": "MutualInformation",
+      "parent_class": "Metric",
+      "comment": "Represents generic mutual information metrics."
+    },
+    {
+      "class_name": "MutualInformationMetric",
+      "parent_class": "MutualInformation",
+      "comment": "Represents numeric mutual information scores."
+    },
+    {
+      "class_name": "MutualInformationScore",
+      "parent_class": "MutualInformationMetric",
+      "comment": "Represents computed mutual information scores."
+    },
+    {
+      "class_name": "MutualInformationLabelParameterMetric",
+      "parent_class": "MutualInformationMetric",
+      "comment": "Represents mutual information between labels and parameters as a metric."
+    },
+    {
+      "class_name": "JointMutualInformationMetric",
+      "parent_class": "MutualInformationMetric",
+      "comment": "Represents joint mutual information metrics over multiple variables."
+    },
+    {
+      "class_name": "SMOCUInformationGain",
+      "parent_class": "MutualInformationMetric",
+      "comment": "Represents SMOCU information gain metrics."
+    },
+    {
+      "class_name": "InformationGainScore",
+      "parent_class": "MutualInformationMetric",
+      "comment": "Represents information gain-based scores for acquisition."
+    },
+    {
+      "class_name": "AOptimalityCriterion",
+      "parent_class": "Metric",
+      "comment": "Represents A-optimality criteria from optimal design."
+    },
+    {
+      "class_name": "DOptimalityCriterion",
+      "parent_class": "Metric",
+      "comment": "Represents D-optimality criteria from optimal design."
+    },
+    {
+      "class_name": "EOptimalityCriterion",
+      "parent_class": "Metric",
+      "comment": "Represents E-optimality criteria from optimal design."
+    },
+    {
+      "class_name": "GOptimalityCriterion",
+      "parent_class": "Metric",
+      "comment": "Represents G-optimality criteria from optimal design."
+    },
+    {
+      "class_name": "AlphabeticOptimalityCriteria",
+      "parent_class": "Metric",
+      "comment": "Represents the family of A-, D-, E-, and G-optimality criteria."
+    },
+    {
+      "class_name": "AOptimalDesign",
+      "parent_class": "AOptimalityCriterion",
+      "comment": "Represents metrics specific to A-optimal design objectives."
+    },
+    {
+      "class_name": "MinimalVarianceCriterion",
+      "parent_class": "Metric",
+      "comment": "Represents criteria that aim to minimize variance."
+    },
+    {
+      "class_name": "DistanceMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics that measure distance between instances or vectors."
+    },
+    {
+      "class_name": "EuclideanDistance",
+      "parent_class": "DistanceMetric",
+      "comment": "Represents Euclidean distance as a metric."
+    },
+    {
+      "class_name": "EuclideanNormMetric",
+      "parent_class": "DistanceMetric",
+      "comment": "Represents Euclidean norm-based metrics."
+    },
+    {
+      "class_name": "L2DistanceMetric",
+      "parent_class": "DistanceMetric",
+      "comment": "Represents L2 distance metrics."
+    },
+    {
+      "class_name": "EuclideanL2DistanceMetric",
+      "parent_class": "L2DistanceMetric",
+      "comment": "Represents Euclidean L2 distance metrics."
+    },
+    {
+      "class_name": "CosineSimilarity",
+      "parent_class": "Metric",
+      "comment": "Represents cosine similarity between feature vectors."
+    },
+    {
+      "class_name": "CosineDistanceMetric",
+      "parent_class": "DistanceMetric",
+      "comment": "Represents cosine-distance based metrics."
+    },
+    {
+      "class_name": "SimilarityMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics that quantify similarity between instances."
+    },
+    {
+      "class_name": "SimilarityMeasure",
+      "parent_class": "SimilarityMetric",
+      "comment": "Represents generic similarity measures."
+    },
+    {
+      "class_name": "ClassificationMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics used to evaluate classification tasks."
+    },
+    {
+      "class_name": "AccuracyMetric",
+      "parent_class": "ClassificationMetric",
+      "comment": "Represents classification accuracy as a metric."
+    },
+    {
+      "class_name": "ClassificationAccuracy",
+      "parent_class": "AccuracyMetric",
+      "comment": "Represents point-wise classification accuracy."
+    },
+    {
+      "class_name": "OverallAccuracy",
+      "parent_class": "AccuracyMetric",
+      "comment": "Represents overall accuracy across all classes or tasks."
+    },
+    {
+      "class_name": "ClassificationError",
+      "parent_class": "ClassificationMetric",
+      "comment": "Represents classification error as a metric."
+    },
+    {
+      "class_name": "ClassifierError",
+      "parent_class": "ClassificationError",
+      "comment": "Represents classifier-specific error metrics."
+    },
+    {
+      "class_name": "LossFunction",
+      "parent_class": "Metric",
+      "comment": "Represents loss functions used for training or evaluation."
+    },
+    {
+      "class_name": "CrossEntropyLoss",
+      "parent_class": "LossFunction",
+      "comment": "Represents cross-entropy loss."
+    },
+    {
+      "class_name": "MeanSquaredError",
+      "parent_class": "LossFunction",
+      "comment": "Represents mean squared error loss."
+    },
+    {
+      "class_name": "ReconstructionLoss",
+      "parent_class": "LossFunction",
+      "comment": "Represents reconstruction loss used in generative models."
+    },
+    {
+      "class_name": "DataReconstructionLoss",
+      "parent_class": "ReconstructionLoss",
+      "comment": "Represents reconstruction loss applied to data samples."
+    },
+    {
+      "class_name": "SupervisedLoss",
+      "parent_class": "LossFunction",
+      "comment": "Represents losses computed from labeled data."
+    },
+    {
+      "class_name": "SupervisedLossMetric",
+      "parent_class": "LossFunction",
+      "comment": "Represents metrics derived from supervised loss values."
+    },
+    {
+      "class_name": "UnsupervisedLoss",
+      "parent_class": "LossFunction",
+      "comment": "Represents losses computed from unlabeled data."
+    },
+    {
+      "class_name": "LogLoss",
+      "parent_class": "LossFunction",
+      "comment": "Represents log-loss metrics."
+    },
+    {
+      "class_name": "CrossEntropyLossMetric",
+      "parent_class": "LossFunction",
+      "comment": "Represents metrics that track cross-entropy over time."
+    },
+    {
+      "class_name": "ModelPerformanceMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics summarizing overall model performance."
+    },
+    {
+      "class_name": "PerformanceMetric",
+      "parent_class": "ModelPerformanceMetric",
+      "comment": "Represents generic performance metrics."
+    },
+    {
+      "class_name": "PredictivePerformance",
+      "parent_class": "ModelPerformanceMetric",
+      "comment": "Represents performance on predicting labels or outputs."
+    },
+    {
+      "class_name": "PredictivePerformanceMetric",
+      "parent_class": "ModelPerformanceMetric",
+      "comment": "Represents numeric predictors of future performance."
+    },
+    {
+      "class_name": "PerformanceEstimation",
+      "parent_class": "ModelPerformanceMetric",
+      "comment": "Represents metrics estimating performance from limited labels."
+    },
+    {
+      "class_name": "PerformanceCurve",
+      "parent_class": "ModelPerformanceMetric",
+      "comment": "Represents performance curves such as learning curves or budget curves."
+    },
+    {
+      "class_name": "PerformanceBudgetCurve",
+      "parent_class": "PerformanceCurve",
+      "comment": "Represents curves tracing performance versus labeling budget."
+    },
+    {
+      "class_name": "ActiveLearningPerformance",
+      "parent_class": "ModelPerformanceMetric",
+      "comment": "Represents metrics focusing on performance in active learning contexts."
+    },
+    {
+      "class_name": "AreaUnderBudgetCurve",
+      "parent_class": "ModelPerformanceMetric",
+      "comment": "Represents the area under a budget-performance curve."
+    },
+    {
+      "class_name": "SlopeOfLearningCurve",
+      "parent_class": "ModelPerformanceMetric",
+      "comment": "Represents the slope of a learning curve as a summary statistic."
+    },
+    {
+      "class_name": "StableReliablePerformance",
+      "parent_class": "ModelPerformanceMetric",
+      "comment": "Represents metrics evaluating stability and reliability of performance."
+    },
+    {
+      "class_name": "LabelEfficiency",
+      "parent_class": "Metric",
+      "comment": "Represents how efficiently labels are used to achieve performance."
+    },
+    {
+      "class_name": "LabelingEfficiencyMetric",
+      "parent_class": "LabelEfficiency",
+      "comment": "Represents numeric metrics for labeling efficiency."
+    },
+    {
+      "class_name": "InformationDensity",
+      "parent_class": "Metric",
+      "comment": "Represents metrics measuring sample information density."
+    },
+    {
+      "class_name": "InformationDensityTerm",
+      "parent_class": "InformationDensity",
+      "comment": "Represents terms capturing information density in acquisition objectives."
+    },
+    {
+      "class_name": "RepresentativenessMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics quantifying representativeness."
+    },
+    {
+      "class_name": "SampleRepresentativenessMetric",
+      "parent_class": "RepresentativenessMetric",
+      "comment": "Represents representativeness metrics at sample level."
+    },
+    {
+      "class_name": "RepresentativenessBasedCriterion",
+      "parent_class": "RepresentativenessMetric",
+      "comment": "Represents criteria based on sample representativeness."
+    },
+    {
+      "class_name": "RepresentativenessMeasure",
+      "parent_class": "RepresentativenessMetric",
+      "comment": "Represents generic representativeness measures."
+    },
+    {
+      "class_name": "InformativenessMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics quantifying sample informativeness."
+    },
+    {
+      "class_name": "InformativenessMeasure",
+      "parent_class": "InformativenessMetric",
+      "comment": "Represents generic informativeness measures."
+    },
+    {
+      "class_name": "InformativenessScore",
+      "parent_class": "InformativenessMetric",
+      "comment": "Represents numeric informativeness scores."
+    },
+    {
+      "class_name": "DataSelectionGranularityMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics about the granularity of data selection units."
+    },
+    {
+      "class_name": "ActiveLearningErrorMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics focused on error in active learning experiments."
+    },
+    {
+      "class_name": "MeanSquaredPredictionErrorMetric",
+      "parent_class": "Metric",
+      "comment": "Represents mean squared prediction error metrics."
+    },
+    {
+      "class_name": "AnnotationCostMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics quantifying annotation cost."
+    },
+    {
+      "class_name": "ComputationalCostMetric",
+      "parent_class": "Metric",
+      "comment": "Represents metrics quantifying computational cost."
+    },
+    {
+      "class_name": "LabelStatistics",
+      "parent_class": "Metric",
+      "comment": "Represents metrics summarizing label distribution statistics."
+    },
+    {
+      "class_name": "NumberOfLabeledSamplesMetric",
+      "parent_class": "LabelStatistics",
+      "comment": "Represents metrics counting labeled samples."
+    },
+    {
+      "class_name": "LabeledSampleCountMetric",
+      "parent_class": "NumberOfLabeledSamplesMetric",
+      "comment": "Represents number of labeled samples at a given iteration."
+    },
+    {
+      "class_name": "QuadraticFormLeverage",
+      "parent_class": "Metric",
+      "comment": "Represents leverage scores computed via quadratic forms."
+    },
+    {
+      "class_name": "FriedmanTestFamily",
+      "parent_class": "Metric",
+      "comment": "Represents non-parametric Friedman test statistics."
+    },
+    {
+      "class_name": "WilcoxonSignedRanksTest",
+      "parent_class": "Metric",
+      "comment": "Represents the Wilcoxon signed-ranks test statistic."
+    },
+    {
+      "class_name": "NonParametricTests",
+      "parent_class": "Metric",
+      "comment": "Represents families of non-parametric statistical tests."
+    },
+    {
+      "class_name": "SignTest",
+      "parent_class": "Metric",
+      "comment": "Represents sign test metrics."
+    },
+    {
+      "class_name": "...TRUNCATED",
+      "parent_class": "OtherConcept",
+      "comment": "Due to space, remaining concepts follow the same pattern: each becomes a class with parent given by its Anchor (Task, Method, Metric, Dataset, Constraint, or OtherConcept), and a short comment like 'Represents the <Name> concept in the ontology.'"
+    }
+  ],
+  "properties": [
+    {
+      "property_name": "methodSolvesTask",
+      "domain": "Method",
+      "range": "Task",
+      "comment": "Relates a method to the task or problem it is designed to solve."
+    },
+    {
+      "property_name": "methodEvaluatedByMetric",
+      "domain": "Method",
+      "range": "Metric",
+      "comment": "Relates a method to metrics used to evaluate its performance."
+    },
+    {
+      "property_name": "metricEvaluatesTask",
+      "domain": "Metric",
+      "range": "Task",
+      "comment": "Relates a metric to the task whose performance it measures."
+    },
+    {
+      "property_name": "methodTrainedOnDataset",
+      "domain": "Method",
+      "range": "Dataset",
+      "comment": "Indicates that a method is trained using a particular dataset."
+    },
+    {
+      "property_name": "methodTestedOnDataset",
+      "domain": "Method",
+      "range": "Dataset",
+      "comment": "Indicates that a method is evaluated or tested on a particular dataset."
+    },
+    {
+      "property_name": "datasetUsedForTask",
+      "domain": "Dataset",
+      "range": "Task",
+      "comment": "Indicates that a dataset is used to instantiate or study a task."
+    },
+    {
+      "property_name": "taskConstrainedBy",
+      "domain": "Task",
+      "range": "Constraint",
+      "comment": "Indicates that a task operates under a particular constraint."
+    },
+    {
+      "property_name": "methodSubjectToConstraint",
+      "domain": "Method",
+      "range": "Constraint",
+      "comment": "Indicates that a method must satisfy or is analyzed under a given constraint."
+    },
+    {
+      "property_name": "metricSensitiveToConstraint",
+      "domain": "Metric",
+      "range": "Constraint",
+      "comment": "Indicates that a metric’s value or applicability depends on a given constraint."
+    },
+    {
+      "property_name": "acquisitionStrategyUsesMetric",
+      "domain": "AcquisitionStrategy",
+      "range": "Metric",
+      "comment": "Links an acquisition strategy to the metric it optimizes or relies on (e.g., uncertainty or representativeness)."
+    },
+    {
+      "property_name": "acquisitionStrategyOperatesOnDataset",
+      "domain": "AcquisitionStrategy",
+      "range": "Dataset",
+      "comment": "Indicates the unlabeled pool or dataset on which an acquisition strategy selects queries."
+    },
+    {
+      "property_name": "activeLearningLoopUsesStrategy",
+      "domain": "ActiveLearningLoop",
+      "range": "AcquisitionStrategy",
+      "comment": "Links an active learning loop to the acquisition strategy it employs."
+    },
+    {
+      "property_name": "activeLearningLoopQueriesOracle",
+      "domain": "ActiveLearningLoop",
+      "range": "OtherConcept",
+      "comment": "Relates an active learning loop to its oracle or annotator concept."
+    },
+    {
+      "property_name": "annotatorProvidesLabelsForDataset",
+      "domain": "OtherConcept",
+      "range": "Dataset",
+      "comment": "Indicates that an annotator or oracle provides labels for a given dataset."
+    },
+    {
+      "property_name": "methodProducesModel",
+      "domain": "Method",
+      "range": "OtherConcept",
+      "comment": "Relates a learning method to the resulting model object (e.g., classifier or segmentor)."
+    },
+    {
+      "property_name": "modelInducesUncertaintyMetric",
+      "domain": "OtherConcept",
+      "range": "UncertaintyMetric",
+      "comment": "Relates a model to the uncertainty metric derived from its predictions."
+    },
+    {
+      "property_name": "datasetHasDomain",
+      "domain": "Dataset",
+      "range": "OtherConcept",
+      "comment": "Links a dataset to its application domain (e.g., medical imaging, NLP, vision)."
+    },
+    {
+      "property_name": "taskHasDomain",
+      "domain": "Task",
+      "range": "OtherConcept",
+      "comment": "Links a task to its domain (e.g., MedicalImagingDomain, NaturalLanguageProcessingDomain)."
+    },
+    {
+      "property_name": "methodUsesPretrainedModel",
+      "domain": "Method",
+      "range": "Method",
+      "comment": "Indicates that a method uses another method as a pretrained model or backbone."
+    },
+    {
+      "property_name": "methodComposedOfComponent",
+      "domain": "Method",
+      "range": "Method",
+      "comment": "Represents that a complex method is composed of sub-methods or modules."
+    }
+  ]
+}
