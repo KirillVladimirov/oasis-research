@@ -1,0 +1,92 @@
+{
+  "topic": "deep_active_learning",
+  "version": "1.0",
+  "created_at": "2025-01-20",
+  "papers": [
+    {
+      "paper_id": "15-2210.10109v2",
+      "ref_number": 15,
+      "title": "A survey of active learning for natural language processing",
+      "year": 2022,
+      "venue": "Proc. of EMNLP",
+      "authors": ["Z Zhang", "E Strubell", "E H Hovy"],
+      "arxiv_id": "2210.10109",
+      "doi": null,
+      "pdf_path": "data/deep_active_learning/paper_pdfs/15-2210.10109v2.pdf",
+      "paper_type": "review",
+      "purpose": "seed_questions_generation",
+      "notes": "Primary survey for NLP domain"
+    },
+    {
+      "paper_id": "16-2104.07784v1",
+      "ref_number": 16,
+      "title": "A survey of active learning algorithms for supervised remote sensing image classification",
+      "year": 2021,
+      "venue": "CoRR",
+      "authors": ["D Tuia", "M Volpi", "L Copa", "M F Kanevski", "J Muñoz-Marí"],
+      "arxiv_id": "2104.07784",
+      "doi": null,
+      "pdf_path": "data/deep_active_learning/paper_pdfs/16-2104.07784v1.pdf",
+      "paper_type": "review",
+      "purpose": "seed_questions_generation",
+      "notes": "Survey for remote sensing applications"
+    },
+    {
+      "paper_id": "17-2310.14230v3",
+      "ref_number": 17,
+      "title": "A comprehensive survey on deep active learning and its applications in medical image analysis",
+      "year": 2023,
+      "venue": "CoRR",
+      "authors": ["H Wang", "Q Jin"],
+      "arxiv_id": "2310.14230",
+      "doi": "10.48550/arxiv.2310.14230",
+      "pdf_path": "data/deep_active_learning/paper_pdfs/17-2310.14230v3.pdf",
+      "paper_type": "review",
+      "purpose": "seed_questions_generation",
+      "notes": "Comprehensive survey for medical imaging domain"
+    },
+    {
+      "paper_id": "22-2203.13450v3",
+      "ref_number": 22,
+      "title": "A comparative survey of deep active learning",
+      "year": 2022,
+      "venue": "CoRR",
+      "authors": ["X Zhan", "Q Wang"],
+      "arxiv_id": "2203.13450",
+      "doi": null,
+      "pdf_path": "data/deep_active_learning/paper_pdfs/22-2203.13450v3.pdf",
+      "paper_type": "review",
+      "purpose": "seed_questions_generation",
+      "notes": "Comparative analysis of DAL approaches"
+    },
+    {
+      "paper_id": "26-2009.00236v2",
+      "ref_number": 26,
+      "title": "A survey of deep active learning",
+      "year": 2022,
+      "venue": "ACM Comput. Surv",
+      "authors": ["P Ren", "Y Xiao"],
+      "arxiv_id": "2009.00236",
+      "doi": null,
+      "pdf_path": "data/deep_active_learning/paper_pdfs/26-2009.00236v2.pdf",
+      "paper_type": "review",
+      "purpose": "seed_questions_generation",
+      "notes": "General survey of DAL"
+    },
+    {
+      "paper_id": "28-s10994-023-06454-2",
+      "ref_number": 28,
+      "title": "Active learning for data streams: a survey",
+      "year": 2024,
+      "venue": "Mach. Learn",
+      "authors": ["D Cacciarelli", "M Kulahci"],
+      "arxiv_id": null,
+      "doi": "10.1007/s10994-023-06454-2",
+      "pdf_path": "data/deep_active_learning/paper_pdfs/28-s10994-023-06454-2.pdf",
+      "paper_type": "review",
+      "purpose": "seed_questions_generation",
+      "notes": "Survey for streaming data scenarios"
+    }
+  ]
+}
+

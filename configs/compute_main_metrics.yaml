@@ -1,0 +1,79 @@
+inputs:
+  topic: deep_active_learning
+  cqs_path: outputs/deep_active_learning/step6b/cq_canonical.jsonl
+  # Пути к ответам из step8_generate_answers.py
+  answers_baseline_path: outputs/deep_active_learning/step8_answers/run_001/baseline_answers.jsonl
+  answers_onto_path: outputs/deep_active_learning/step8_answers/run_001/ontology_answers.jsonl
+  # Альтернативные пути (для обратной совместимости):
+  # answers_baseline_path: outputs/deep_active_learning/step4/cq_with_final_answers.jsonl
+  # answers_onto_path: outputs/deep_active_learning/answers_onto.jsonl
+  review_pdf_path: data/deep_active_learning/2405.00334/review.pdf
+  ontology_tbox_path: outputs/deep_active_learning/step6c/deep_active_learning_enriched.owl
+  kg_owl_path: outputs/deep_active_learning/step7/deep_active_learning_kg.owl
+
+outputs:
+  reference_answers_path: artifacts/reference/reference_answers.jsonl
+  sanity_report_path: artifacts/metrics/_sanity_report.json
+  judge_scores_path: artifacts/metrics/judge_scores.jsonl
+  judge_raw_path: artifacts/metrics/judge_raw.jsonl
+  per_cq_scores_path: artifacts/metrics/per_cq_scores.csv
+  aggregate_json_path: artifacts/metrics/aggregate_quality.json
+  aggregate_md_path: artifacts/metrics/aggregate_quality.md
+  ontology_structural_metrics_path: artifacts/metrics/ontology_kg_structural.json
+  onto_context_usage_path: artifacts/metrics/onto_context_usage.csv
+  summary_metrics_md_path: artifacts/metrics/summary_metrics.md
+  summary_metrics_json_path: artifacts/metrics/summary_metrics.json
+
+reference_builder:
+  reuse_cached: true
+  chunk_size: 1200
+  chunk_overlap: 200
+  top_k: 4
+  fusion_alpha: 0.5
+  max_retries: 3
+  llm:
+    model: gemini-3-flash-preview
+    temperature: 0.0
+    max_tokens: 900
+    retry_delay: 2.0
+  bm25:
+    k1: 1.5
+    b: 0.75
+  embedding:
+    enabled: true
+    model_name: sentence-transformers/all-MiniLM-L6-v2
+    device: cpu
+
+judge:
+  model: gemini-3-flash-preview
+  temperature: 0.0
+  max_tokens: 600
+  max_retries: 3
+  retry_delay: 2.0
+  scale:
+    min_score: 1
+    max_score: 5
+
+quality:
+  good_answer_threshold: 4
+
+rag_metrics:
+  # Пути к полям в структуре step8_generate_answers.py
+  # Скрипт автоматически суммирует retrieval + llm для общей latency
+  topk_field: context.stats.top_k
+  context_tokens_field: context.stats.context_tokens_est
+  latency_field: timings_ms.retrieval  # Используется как fallback, обычно суммируется retrieval + llm
+  fallback_context_fields:
+    - context.items
+    - context.chunks
+
+onto_context_metrics:
+  # Пути к полям в структуре step8_generate_answers.py
+  # Скрипт автоматически суммирует mapping + extraction + llm для общей latency
+  facts_count_field: context.stats.n_triples_selected
+  tokens_field: context.stats.kg_context_tokens_est
+  ontology_terms_field: context.stats.n_matched_terms
+  latency_field: timings_ms.mapping  # Используется как fallback, обычно суммируется mapping + extraction + llm
+  facts_list_fields:
+    - context.items.facts
+    - context.items.matched_terms
