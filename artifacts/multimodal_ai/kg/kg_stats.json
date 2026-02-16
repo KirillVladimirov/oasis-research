@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 214,
+    "Chunk": 653,
+    "CQ": 200,
+    "Class_tbox": 493,
+    "Relation_tbox": 136
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 653
+  },
+  "triples": 20017,
+  "top_relations": [
+    "contributesTo",
+    "optimizes",
+    "tracksPredictionsWith",
+    "evaluates",
+    "associatedWith",
+    "utilizes",
+    "affectsPerformance",
+    "requiresMoreFrames",
+    "enablesHandlingOf",
+    "hasFrame",
+    "correctsErrorsIn",
+    "detects",
+    "encodes",
+    "usesOptimizer",
+    "uses",
+    "passesInputTo",
+    "performsAlignment",
+    "causes",
+    "isTrainedWith",
+    "evaluatesRepresentation"
+  ],
+  "top_classes": [
+    "Single Modality Model",
+    "Image-Text Retrieval",
+    "ModalityAwareNegative",
+    "Multimodal Generative Model",
+    "Multimodal Task",
+    "HumanPreferenceData",
+    "SingleModalityModel",
+    "Proprietary LLM",
+    "ConvergenceSpeed",
+    "Collection Process",
+    "InitialPacketLatency",
+    "MultimodalScaling",
+    "LanguageFeedback",
+    "MultimodalModel",
+    "Fine-tuned Approach",
+    "Vision Model",
+    "GPU Memory",
+    "Large Language Model",
+    "Multimodal Large Language Model",
+    "InfoNCELoss"
+  ],
+  "documents_covered": 214,
+  "chunks_covered": 653
+}

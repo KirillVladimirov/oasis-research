@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 30,
+    "Chunk": 249,
+    "CQ": 200,
+    "Class_tbox": 409,
+    "Relation_tbox": 141
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 249
+  },
+  "triples": 16744,
+  "top_relations": [
+    "evaluatedBy",
+    "impacts",
+    "engagesIn",
+    "performsTask",
+    "requiresResource",
+    "implementedBy",
+    "deployedIn",
+    "addressesScenario",
+    "generatesReportEquivalentTo",
+    "appliedToTissue",
+    "comprises",
+    "alignsEmbedding",
+    "simulates",
+    "utilizes",
+    "generatedBy",
+    "containsCluster",
+    "generates",
+    "synthesizes",
+    "incorporatesLayer",
+    "enforcesPrinciple"
+  ],
+  "top_classes": [
+    "GenerativeArchitecture",
+    "Information Extraction Application",
+    "UnsupervisedLearning",
+    "Inpainting",
+    "Texture Similarity",
+    "InstructionTuning",
+    "GPU",
+    "Phenotype",
+    "Latent Diffusion Model",
+    "SyntheticTrainingData",
+    "Molecular Profile",
+    "Computational Resource",
+    "HistologyImage",
+    "Pathology Image",
+    "Generator",
+    "Synthetic H&E Image",
+    "Virtual Molecular Profiling",
+    "Generative Model",
+    "LossFunction",
+    "FIDScore"
+  ],
+  "documents_covered": 30,
+  "chunks_covered": 249
+}

@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 206,
+    "Chunk": 671,
+    "CQ": 200,
+    "Class_tbox": 516,
+    "Relation_tbox": 175
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 671
+  },
+  "triples": 21403,
+  "top_relations": [
+    "incorporates",
+    "governedBy",
+    "distributesTo",
+    "managedBy",
+    "optimizesForCost",
+    "accelerates",
+    "hasConstraint",
+    "subjectTo",
+    "maintains",
+    "performsOperation",
+    "groupsRequestsInto",
+    "tames",
+    "managesHierarchy",
+    "interrupts",
+    "triggersUseOf",
+    "managesBatch",
+    "appliedIn",
+    "follows",
+    "appliesTo",
+    "managesCache"
+  ],
+  "top_classes": [
+    "Inference Performance",
+    "HardwareAccelerator",
+    "INT8",
+    "SLORequirement",
+    "BottleneckStage",
+    "HeterogeneousCluster",
+    "WarmUpPhase",
+    "LongContextTask",
+    "GPU Memory",
+    "MultiTenantEnvironment",
+    "Inference Serving System",
+    "KV Slab",
+    "GPU",
+    "Scheduler",
+    "LLM Cold Start",
+    "KVCache",
+    "Eviction Policy",
+    "StoppingCriterion",
+    "Disaggregated Serving",
+    "RPSBasedPolicy"
+  ],
+  "documents_covered": 206,
+  "chunks_covered": 671
+}

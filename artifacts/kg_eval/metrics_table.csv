@@ -1,0 +1,17 @@
+kg_name,triples,n_papers,n_chunks,n_cqs,n_supports,typed_ratio,evidence_coverage,doc_concentration_top1,giant_component_share,top1_predicate_share,top3_predicate_share,predicate_entropy,shacl_violations,all_ok
+automl,16760,54,346,200,1000,1.0,1.0,0.115,1.0,0.7429,1.0,0.8223,0,True
+causal_inference,18477,162,596,200,996,1.0,1.0,0.0733,0.9916,0.6256,1.0,0.954,0,True
+deep_active_learning,18442,134,461,200,1000,1.0,1.0,0.172,1.0,0.6845,1.0,0.8995,0,True
+deep_learning_neural_networks,16190,50,393,200,1000,1.0,1.0,0.066,1.0,0.7179,1.0,0.8583,0,True
+diffusion_models,19751,210,698,200,1000,1.0,1.0,0.036,1.0,0.5889,1.0,0.9771,0,True
+generative_models_in_pathology,16744,30,249,200,1000,1.0,1.0,0.349,1.0,0.8006,1.0,0.7206,0,True
+graph_nn_research,17223,89,457,200,1000,1.0,1.0,0.049,0.9906,0.6863,1.0,0.8974,0,True
+graph_nn_systems,18593,58,439,200,1000,1.0,1.0,0.087,1.0,0.6949,1.0,0.8874,0,True
+healthcare_foundation_models,17687,100,426,200,1000,1.0,1.0,0.099,1.0,0.7013,1.0,0.8797,0,True
+ml_systems,18646,92,550,200,1000,1.0,1.0,0.042,1.0,0.6452,1.0,0.9383,0,True
+ml_systems_distributed_training,19320,109,548,200,1000,1.0,1.0,0.092,1.0,0.646,1.0,0.9376,0,True
+ml_systems_inference_system,21403,206,671,200,1000,1.0,1.0,0.026,1.0,0.5984,1.0,0.9719,0,True
+ml_systems_mixture_of_experts_moe,18739,150,543,200,1000,1.0,1.0,0.039,1.0,0.6481,1.0,0.9358,0,True
+model_quantization,19237,192,587,200,1000,1.0,1.0,0.063,1.0,0.6301,1.0,0.9506,0,True
+multimodal_ai,20017,214,653,200,1000,1.0,1.0,0.053,0.9897,0.605,1.0,0.968,0,True
+speech_recognition_synthesis,18467,186,574,200,1000,1.0,1.0,0.046,1.0,0.6353,1.0,0.9465,0,True

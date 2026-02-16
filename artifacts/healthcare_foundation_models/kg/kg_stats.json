@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 100,
+    "Chunk": 426,
+    "CQ": 200,
+    "Class_tbox": 455,
+    "Relation_tbox": 113
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 426
+  },
+  "triples": 17687,
+  "top_relations": [
+    "utilizesHistory",
+    "comprises",
+    "elicitsReasoningIn",
+    "fusesInformationFor",
+    "reduces",
+    "processes",
+    "addressesChallengesOf",
+    "includes history",
+    "hasSharedComponentWith",
+    "uses",
+    "evaluatedBy",
+    "mitigates",
+    "relatedTo",
+    "requiresSkill",
+    "utilizes method",
+    "affectedBy",
+    "evaluatedOn",
+    "alignsWith",
+    "improvesPerformanceOf",
+    "precedes"
+  ],
+  "top_classes": [
+    "LLM",
+    "Clinical Workflow",
+    "Pool",
+    "Clinical Text Document",
+    "Fine-Tuning Method",
+    "Unstructured EHR Data",
+    "MedicalImagingTask",
+    "Instruction Tuning",
+    "Medical Information",
+    "Random Horizontal Flip",
+    "Audio Signal",
+    "SupervisedPretraining",
+    "FederatedLearning",
+    "Improper Diagnosis",
+    "MICA scale",
+    "UncertaintyEstimate",
+    "CandidateCompound",
+    "Endoscopy Foundation Model",
+    "Text Report Generation",
+    "TransformerArchitecture"
+  ],
+  "documents_covered": 100,
+  "chunks_covered": 426
+}

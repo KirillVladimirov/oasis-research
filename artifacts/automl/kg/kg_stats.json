@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 54,
+    "Chunk": 346,
+    "CQ": 200,
+    "Class_tbox": 346,
+    "Relation_tbox": 147
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 346
+  },
+  "triples": 16760,
+  "top_relations": [
+    "discovers",
+    "evaluatesPerformanceVia",
+    "triggersIteration",
+    "hasBudget",
+    "utilizes",
+    "reaches",
+    "transfersTo",
+    "utilizesProcess",
+    "operatesOn",
+    "executes",
+    "searchesFor",
+    "utilizesTransferableBlock",
+    "evaluatedOn",
+    "representedAs",
+    "includesPreprocessing",
+    "usesMetaLearning",
+    "detects",
+    "explores",
+    "partOf",
+    "utilizesTechnique"
+  ],
+  "top_classes": [
+    "Species",
+    "MetaLearning",
+    "AutoMLSystem",
+    "DataPreprocessing",
+    "Surrogate-based ranking algorithm",
+    "HyperparameterOptimization",
+    "Noisy Observation",
+    "Directed Acyclic Graph",
+    "Performance Estimate",
+    "LearningAlgorithm",
+    "Maximum Resource",
+    "http://example.org/S0/R1#OntologyAxiom",
+    "Algorithm",
+    "CMA-ES",
+    "Data Format Crash",
+    "AutoMLProcess",
+    "ModelCompression",
+    "Hyper-parameter Values",
+    "Hyper-parameter tuning",
+    "Configuration"
+  ],
+  "documents_covered": 54,
+  "chunks_covered": 346
+}

@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 150,
+    "Chunk": 543,
+    "CQ": 200,
+    "Class_tbox": 384,
+    "Relation_tbox": 158
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 543
+  },
+  "triples": 18739,
+  "top_relations": [
+    "executesIn",
+    "hasSaturationPoint",
+    "manages",
+    "determines",
+    "optimizes",
+    "isStoredIn",
+    "influencesDroppedTokens",
+    "appliedTo",
+    "hampers training speed of",
+    "hasBottleneck",
+    "hasGranularity",
+    "requiresCommunication",
+    "updates",
+    "constrainedBy",
+    "hostedOn",
+    "reduces",
+    "containsMoELayer",
+    "characterizes",
+    "isSplitInto",
+    "processes"
+  ],
+  "top_classes": [
+    "ExpertPlacement",
+    "ExactRouting",
+    "GatingModule",
+    "Expert Parallelism",
+    "Language Model",
+    "GlobalInformation",
+    "MoE Block",
+    "Critical Path Latency",
+    "MoEModel",
+    "All-to-All Communication",
+    "TokenWorkload",
+    "BackwardPass",
+    "ParallelArchitecture",
+    "Hot Expert",
+    "Expert Capacity",
+    "StragglerEffect",
+    "Kernel",
+    "MBU",
+    "ModelQuality",
+    "Expert"
+  ],
+  "documents_covered": 150,
+  "chunks_covered": 543
+}

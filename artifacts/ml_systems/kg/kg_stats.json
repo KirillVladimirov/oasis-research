@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 92,
+    "Chunk": 550,
+    "CQ": 200,
+    "Class_tbox": 465,
+    "Relation_tbox": 123
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 550
+  },
+  "triples": 18646,
+  "top_relations": [
+    "notifies",
+    "incursOverhead",
+    "usesProtocol",
+    "hasConstraint",
+    "indexes",
+    "operatesOn",
+    "dependsOn",
+    "utilizesGPU",
+    "prepares",
+    "hasCacheBudget",
+    "loadsFrom",
+    "mustMeet",
+    "usesCommunication",
+    "processesBatch",
+    "utilizes",
+    "affects",
+    "performs",
+    "partitions",
+    "affectsPerformance",
+    "suffersFrom"
+  ],
+  "top_classes": [
+    "Operator",
+    "CommunicationStrategy",
+    "OptimizerState",
+    "Sub-Ring",
+    "Spot Instance",
+    "SchedulingApproach",
+    "Inference",
+    "Interconnect",
+    "End-to-End Latency",
+    "ReinforcementLearningAgent",
+    "KV Cache Budget",
+    "IterationTime",
+    "Uniform Strategy",
+    "Device",
+    "LossCalculation",
+    "Optimization",
+    "InferenceSystem",
+    "KVCache",
+    "Sparsification",
+    "Sparsification Mechanism"
+  ],
+  "documents_covered": 92,
+  "chunks_covered": 550
+}

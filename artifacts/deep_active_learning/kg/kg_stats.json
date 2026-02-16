@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 134,
+    "Chunk": 461,
+    "CQ": 200,
+    "Class_tbox": 408,
+    "Relation_tbox": 145
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 461
+  },
+  "triples": 18442,
+  "top_relations": [
+    "operatesWithBatchSize",
+    "selectsFrom",
+    "usesStrategy",
+    "usesAlgorithm",
+    "provides",
+    "combines",
+    "hasStoppingCriterion",
+    "hasCost",
+    "employsAcquisitionMethod",
+    "usesMeasure",
+    "processesStream",
+    "learnsFrom",
+    "aggravates",
+    "addedTo",
+    "estimatedBy",
+    "identifies",
+    "integratedInto",
+    "targetsThreshold",
+    "transforms",
+    "improvesSelectionOf"
+  ],
+  "top_classes": [
+    "Uncertainty estimate",
+    "Discriminative learning",
+    "Budget Regime",
+    "Batch-mode",
+    "Expert Human",
+    "Mutual Information",
+    "Random Sampling",
+    "ActiveLearningProblem",
+    "Representative sample",
+    "LowResourceSetting",
+    "Label Disagreement",
+    "Random Baseline",
+    "SelfSupervisedPreTraining",
+    "InitialLabeledSet",
+    "Active-DPP",
+    "Traditional AL Method",
+    "Expert Oracle",
+    "ShannonEntropy",
+    "Expected Gradient Length",
+    "StablePred"
+  ],
+  "documents_covered": 134,
+  "chunks_covered": 461
+}

@@ -1,0 +1,11 @@
+{
+  "n_nodes": 697,
+  "n_edges": 1439,
+  "density": 0.002966,
+  "avg_degree": 4.1291,
+  "predicate_entropy": 0.8874,
+  "top1_predicate_share": 0.6949,
+  "top3_predicate_share": 1.0,
+  "n_components": 1,
+  "giant_component_share": 1.0
+}

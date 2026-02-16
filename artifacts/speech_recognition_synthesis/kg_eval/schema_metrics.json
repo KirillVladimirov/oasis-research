@@ -1,0 +1,9 @@
+{
+  "n_classes": 430,
+  "n_object_properties": 103,
+  "n_datatype_properties": 70,
+  "relationship_richness": 0.5954,
+  "inheritance_richness": 20.5476,
+  "max_class_depth": 5,
+  "avg_class_depth": 2.4362
+}

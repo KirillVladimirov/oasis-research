@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 210,
+    "Chunk": 698,
+    "CQ": 200,
+    "Class_tbox": 429,
+    "Relation_tbox": 135
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 698
+  },
+  "triples": 19751,
+  "top_relations": [
+    "conditions",
+    "usesSampler",
+    "approximates",
+    "reducesDimensionalityOf",
+    "feedsInto",
+    "affectsGenerationOf",
+    "usesMathematicalFramework",
+    "hasSupportFor",
+    "utilizesKernel",
+    "usesDenoiser",
+    "trained on",
+    "utilizesModule",
+    "interpolatedBy",
+    "usesTimeStep",
+    "hasConstraint",
+    "usesInputType",
+    "estimates",
+    "appliesToTimestep",
+    "exhibitsBias",
+    "hasParameter"
+  ],
+  "top_classes": [
+    "Binary Edit Mask",
+    "Drift Coefficient",
+    "UNetBackbone",
+    "UNet",
+    "TrainingProcess",
+    "Precision",
+    "http://example.org/S0/R1#OntologyAxiom",
+    "Semantic Space",
+    "DiffusionTraining",
+    "DataAugmentation",
+    "Runge-Kutta Method",
+    "AdaLN-Zero",
+    "ContinuousTimeFormulation",
+    "Corruption",
+    "Guidance weight",
+    "SecondOrderODESolver",
+    "Null-text Optimization",
+    "Denoising Diffusion Probabilistic Model",
+    "NullPrompt",
+    "Noise-Parameterization"
+  ],
+  "documents_covered": 210,
+  "chunks_covered": 698
+}

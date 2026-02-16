@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 50,
+    "Chunk": 393,
+    "CQ": 200,
+    "Class_tbox": 355,
+    "Relation_tbox": 97
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 393
+  },
+  "triples": 16190,
+  "top_relations": [
+    "uses regularization",
+    "producesEstimatesFor",
+    "trained on",
+    "regularizes",
+    "hasInput",
+    "hasLoss",
+    "updates",
+    "produces",
+    "hasComplexity",
+    "belongsToSuperCategory",
+    "generates",
+    "processesModality",
+    "composed of",
+    "isAppliedIn",
+    "coOccursWith",
+    "usesActivationFunction",
+    "undergoes",
+    "improvesPerformanceOf",
+    "combinedWith",
+    "appliedIn"
+  ],
+  "top_classes": [
+    "DiverseOutput",
+    "Data Augmentation",
+    "Gradient-based Optimizer",
+    "Sentence",
+    "Deeper Neural Network",
+    "MinorityClass",
+    "Dropout",
+    "Modality",
+    "NeuralNetwork",
+    "PreTrainedVector",
+    "Training Stability",
+    "Pre-trained Vector",
+    "Object Instance",
+    "Classification Task",
+    "Semantic Segmentation",
+    "RegularizationMethod",
+    "Oversampling",
+    "TrainingRegime",
+    "Training Data",
+    "Computational Resource"
+  ],
+  "documents_covered": 50,
+  "chunks_covered": 393
+}

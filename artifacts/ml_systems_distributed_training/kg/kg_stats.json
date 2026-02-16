@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 109,
+    "Chunk": 548,
+    "CQ": 200,
+    "Class_tbox": 436,
+    "Relation_tbox": 152
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 548
+  },
+  "triples": 19320,
+  "top_relations": [
+    "incursCommunication",
+    "gathers",
+    "isDictatedBy",
+    "isInfluencedBy",
+    "inserted at",
+    "distributesWorkloadTo",
+    "mitigatesCongestionVia",
+    "utilizes accelerator",
+    "implements",
+    "facilitatesCommunicationBetween",
+    "sendsGlobalModelTo",
+    "fillsBubbleWith",
+    "hasCommunicationCost",
+    "utilizesConfiguration",
+    "affectsEffectivenessOf",
+    "amortizes",
+    "swappedInTo",
+    "overlapsWith",
+    "accumulatedOver",
+    "managesAllocationFor"
+  ],
+  "top_classes": [
+    "SSD",
+    "MitigationScheme",
+    "Large-scale Model",
+    "LossFunction",
+    "Local SGD-type Method",
+    "CheckpointPerformance",
+    "CommunicationGroup",
+    "Mixture-of-Experts",
+    "Operator",
+    "Cluster",
+    "PipelineStage",
+    "MPIBasedLibrary",
+    "MemoryConstraint",
+    "NCCL",
+    "GPU Time",
+    "GPipe",
+    "Parallel Execution Plan",
+    "Data Parallelism",
+    "PipelineBubble",
+    "1F1BSchedule"
+  ],
+  "documents_covered": 109,
+  "chunks_covered": 548
+}

@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 162,
+    "Chunk": 596,
+    "CQ": 200,
+    "Class_tbox": 410,
+    "Relation_tbox": 127
+  },
+  "edges": {
+    "supportedBy": 996,
+    "inPaper": 596
+  },
+  "triples": 18477,
+  "top_relations": [
+    "balances",
+    "hasOutcome",
+    "hasTestableImplication",
+    "evaluatedBy",
+    "estimatesOutcomeUnder",
+    "requiresMediator",
+    "learns",
+    "decomposesInto",
+    "blocks",
+    "incorporates",
+    "induces",
+    "combinesPredictor",
+    "usesScore",
+    "discoveredFrom",
+    "changedUnder",
+    "utilizesModel",
+    "consistentWith",
+    "appliesTo",
+    "estimatedOn",
+    "isParentOf"
+  ],
+  "top_classes": [
+    "Front-door Criterion",
+    "Placebo Treatment Test",
+    "Standardization",
+    "Bad Control",
+    "Cross-World Model",
+    "Estimator",
+    "Outcome Model",
+    "Weighting Method",
+    "Nearest Neighbor Matching",
+    "Sequential Deconfounder",
+    "CausalKnowledge",
+    "Method",
+    "Robust Inference Method",
+    "Marginal Structural Model",
+    "Potential Outcome Framework",
+    "CausalModel",
+    "G-formula",
+    "Confounding Bias",
+    "Control Group",
+    "BiasedData"
+  ],
+  "documents_covered": 162,
+  "chunks_covered": 596
+}

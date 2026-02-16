@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 186,
+    "Chunk": 574,
+    "CQ": 200,
+    "Class_tbox": 430,
+    "Relation_tbox": 103
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 574
+  },
+  "triples": 18467,
+  "top_relations": [
+    "precedes",
+    "employsEncoder",
+    "employsStrategy",
+    "leverages",
+    "reducesRequirementFor",
+    "performsAnalysis",
+    "measuredBy",
+    "improvesRobustnessOf",
+    "evaluatedBy",
+    "usesInput",
+    "appliedTo",
+    "predicts",
+    "has component",
+    "hasComponent",
+    "usesOptimizer",
+    "trainedOn",
+    "usesSymbol",
+    "performsEstimation",
+    "evaluates",
+    "constrainsAlignment"
+  ],
+  "top_classes": [
+    "x-vector",
+    "Multi-Speaker TTS",
+    "ValidationSet",
+    "Word Error Rate",
+    "SubwordUnit",
+    "Text Normalizer",
+    "Audio",
+    "AdversarialLoss",
+    "Phone",
+    "TeacherStudentFramework",
+    "Label Distribution",
+    "Confidence Performance",
+    "ASR+TTS",
+    "SpeechPipeline",
+    "TTS System",
+    "TrainingSequence",
+    "Text-Dependent Speaker Verification",
+    "LossFunction",
+    "AudioFile",
+    "OutputWindowSize"
+  ],
+  "documents_covered": 186,
+  "chunks_covered": 574
+}

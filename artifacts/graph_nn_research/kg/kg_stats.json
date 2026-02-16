@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 89,
+    "Chunk": 457,
+    "CQ": 200,
+    "Class_tbox": 384,
+    "Relation_tbox": 117
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 457
+  },
+  "triples": 17223,
+  "top_relations": [
+    "outperforms",
+    "usedIn",
+    "utilizesFramework",
+    "distilledBy",
+    "tunes",
+    "comprisesLayer",
+    "transfers knowledge to",
+    "improvesRobustnessOf",
+    "hasLayer",
+    "learns",
+    "performs",
+    "operatesOn",
+    "benchmarkedOn",
+    "supportsConvergence",
+    "usesMechanism",
+    "produces",
+    "followedBy",
+    "removes",
+    "encodesAs",
+    "correspondsTo"
+  ],
+  "top_classes": [
+    "ClusteringMethod",
+    "High Degree Node",
+    "Heterophily",
+    "Convergence",
+    "MemoryCapacity",
+    "Graph Neural Network",
+    "Model",
+    "In-batch Negative Sampling",
+    "OGB-MAG Dataset",
+    "Noise",
+    "Neighbor",
+    "Link Prediction",
+    "Federated Learning",
+    "Graph Convolutional Network",
+    "Transductive Setting",
+    "Strict Cold Start",
+    "GNN",
+    "CompressionMethod",
+    "TrainingProcedure",
+    "Scalable Method"
+  ],
+  "documents_covered": 89,
+  "chunks_covered": 457
+}

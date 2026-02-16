@@ -1,0 +1,13 @@
+{
+  "evidence_coverage": 1.0,
+  "avg_evidence_per_statement": 1.0,
+  "n_supports_with_prov": 1000,
+  "doc_diversity": 100,
+  "doc_top1_share": 0.099,
+  "doc_entropy": 5.8039,
+  "doc_concentration_top1": 0.099,
+  "score_mean": 0.7832,
+  "score_ge_05_ratio": 1.0,
+  "score_ge_07_ratio": 1.0,
+  "score_ge_09_ratio": 0.0
+}

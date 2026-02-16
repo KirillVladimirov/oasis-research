@@ -1,0 +1,56 @@
+{
+  "rdf_stats": {
+    "triples": 19320,
+    "resources": 3009,
+    "literals": 10027,
+    "blank_nodes": 0
+  },
+  "schema_metrics": {
+    "n_classes": 436,
+    "n_object_properties": 152,
+    "n_datatype_properties": 70,
+    "relationship_richness": 0.6847,
+    "inheritance_richness": 18.8298,
+    "max_class_depth": 5,
+    "avg_class_depth": 2.2563
+  },
+  "kb_metrics": {
+    "n_papers": 109,
+    "n_chunks": 548,
+    "n_cqs": 200,
+    "n_supports": 1000,
+    "typed_ratio": 1.0
+  },
+  "graph_metrics": {
+    "n_nodes": 857,
+    "n_edges": 1548,
+    "density": 0.00211,
+    "avg_degree": 3.6126,
+    "predicate_entropy": 0.9376,
+    "top1_predicate_share": 0.646,
+    "top3_predicate_share": 1.0,
+    "n_components": 1,
+    "giant_component_share": 1.0
+  },
+  "provenance_metrics": {
+    "evidence_coverage": 1.0,
+    "avg_evidence_per_statement": 1.0,
+    "n_supports_with_prov": 1000,
+    "doc_diversity": 109,
+    "doc_top1_share": 0.092,
+    "doc_entropy": 6.22,
+    "doc_concentration_top1": 0.092,
+    "score_mean": 0.8084,
+    "score_ge_05_ratio": 1.0,
+    "score_ge_07_ratio": 1.0,
+    "score_ge_09_ratio": 0.0
+  },
+  "shacl_violations": 0,
+  "stoplight": {
+    "evidence_ok": true,
+    "shacl_ok": true,
+    "giant_ok": true,
+    "predicate_ok": true,
+    "all_ok": true
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 192,
+    "Chunk": 587,
+    "CQ": 200,
+    "Class_tbox": 395,
+    "Relation_tbox": 148
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 587
+  },
+  "triples": 19237,
+  "top_relations": [
+    "convertsTo",
+    "isAppliedTo",
+    "calculated during",
+    "compresses",
+    "improves",
+    "recoversAccuracyWith",
+    "influencesEfficiencyOf",
+    "isMoreEfficientThan",
+    "supports",
+    "mitigates",
+    "usesDatatype",
+    "usesData",
+    "evaluatedUnder",
+    "appliesScaleTo",
+    "produces",
+    "utilizes",
+    "optimizesFor",
+    "assignsBitWidthTo",
+    "usedToCollect",
+    "satisfiesConstraint"
+  ],
+  "top_classes": [
+    "Calibration",
+    "INT4Format",
+    "ParameterAdjustmentProcess",
+    "ScalingFactor",
+    "Reinforcement-based scheme",
+    "MixedPrecisionQuantization",
+    "QuantizationParameter",
+    "StraightThroughEstimator",
+    "QuantizedDistribution",
+    "Entity",
+    "Calibration Set",
+    "Computational Cost",
+    "PerTensorQuantization",
+    "Transformer",
+    "Performance Degradation",
+    "QuantizationGranularity",
+    "Adversarial Example",
+    "Standard PTQ",
+    "QuantizationStrategy",
+    "Quantization"
+  ],
+  "documents_covered": 192,
+  "chunks_covered": 587
+}

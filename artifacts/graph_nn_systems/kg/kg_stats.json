@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "Paper": 58,
+    "Chunk": 439,
+    "CQ": 200,
+    "Class_tbox": 452,
+    "Relation_tbox": 145
+  },
+  "edges": {
+    "supportedBy": 1000,
+    "inPaper": 439
+  },
+  "triples": 18593,
+  "top_relations": [
+    "handles",
+    "organizes",
+    "constructs",
+    "performsOperation",
+    "setsParametersFor",
+    "computesAttentionFor",
+    "computes",
+    "involves",
+    "dictates",
+    "managesDataFor",
+    "containsNonZero",
+    "operatesOn",
+    "optimizes",
+    "processedOn",
+    "affects",
+    "runsOn",
+    "isRepresentedBy",
+    "incurs",
+    "impactsTradeOffBetween",
+    "utilizes network"
+  ],
+  "top_classes": [
+    "GPUFeatureCopy",
+    "ParameterGradient",
+    "ModelAccuracy",
+    "Scalability",
+    "Neighborhood Explosion Problem",
+    "Intermediate Embedding",
+    "Zero-Copy Optimization",
+    "Kernel Implementation",
+    "Fusible Operator",
+    "Partition Replacement Policy",
+    "Graph Neural Network",
+    "ReductionOperator",
+    "GraphPartition",
+    "DropEdge",
+    "Node Embedding",
+    "GNN Accelerator",
+    "BatchSelection",
+    "MemorySaving",
+    "TrainingNode",
+    "Edge Embedding"
+  ],
+  "documents_covered": 58,
+  "chunks_covered": 439
+}
