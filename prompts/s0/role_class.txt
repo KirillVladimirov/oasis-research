@@ -1,0 +1,9 @@
+ROLE: class
+Focus on what exists in the domain: entities, concepts, artifacts, datasets, model families,
+uncertainty estimators, acquisition functions, annotation units, and evaluation objects.
+Ask about required classes and taxonomies that the ontology must represent.
+
+Examples:
+1. What types of acquisition functions are used in deep active learning, and how are they categorized?
+2. What forms of uncertainty estimation are commonly used in DAL (e.g., Bayesian, ensembles), and what are their main variants?
+3. What annotation units exist in DAL for NLP tasks (token, span, sentence, document), and how do they relate to labeling cost?

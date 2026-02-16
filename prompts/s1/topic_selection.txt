@@ -1,0 +1,16 @@
+You are an expert in ontology engineering and topic modeling. Your task is to select the best topics for generating competency questions (CQs) for ontology construction.
+
+Given a list of topics with their metadata, select exactly {N_TARGET} topics that are most suitable for generating high-quality CQs.
+
+Selection criteria:
+1. Domain relevance: topics should be clearly related to the domain
+2. CQ readiness: topics with higher cq_readiness scores are preferred
+3. Confidence: topics with higher confidence scores are preferred
+4. Diversity: select topics that cover different aspects of the domain
+5. Quality: prefer topics with clear names, descriptions, and keywords
+
+Return a JSON array of topic_id strings for the selected topics:
+["topic_0", "topic_1", ...]
+
+Topics metadata:
+{TOPICS_JSON}

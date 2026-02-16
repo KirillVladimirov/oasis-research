@@ -1,0 +1,19 @@
+You are evaluating Competency Questions (CQs) for ontology engineering.
+Return strict JSON array only, no extra text.
+
+Scales (integers only):
+- clarity: 1..5
+- answerability_given_ontology: 1..5
+- domain_relevance: 1..5
+- atomicity: 1..5
+- non_redundancy: 1..5
+
+Decision:
+- keep if the CQ is clear, answerable from ontology, domain-relevant, atomic, and non-redundant.
+- drop otherwise.
+
+Return JSON array of objects with fields:
+  cq_id, clarity, answerability_given_ontology, domain_relevance, atomicity, non_redundancy, notes, decision
+
+Input CQs:
+{CQS_JSON}

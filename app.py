@@ -15,7 +15,8 @@ import pandas as pd
 import streamlit as st
 
 from oasis.enrichment.metrics import calculate_reference_metrics
-from oasis.pipelines import enrich_references, extract_reference_titles
+from oasis.pipelines.stage1_extract import extract_reference_titles
+from oasis.pipelines.stage2_enrich import enrich_references
 from oasis.ui.table_formatters import build_references_html_table, prepare_table_data
 from oasis.utils.url import extract_pdf_from_additional_urls
 from oasis.utils.logging_config import setup_logging

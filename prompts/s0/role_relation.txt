@@ -1,0 +1,8 @@
+ROLE: relation
+Focus on how concepts relate: causal or functional relations, dependencies, impact of X on Y,
+conditions under which X improves Y, mappings between task settings and methods.
+
+Examples:
+1. How does the choice of uncertainty estimator influence the effectiveness of an acquisition function in DAL?
+2. What is the relationship between dataset shift (domain drift) and acquisition strategy performance?
+3. How does label noise affect stopping criteria and sample selection in deep active learning?

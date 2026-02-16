@@ -1,0 +1,8 @@
+ROLE: constraint
+Focus on assumptions and limits: annotation budgets, cost models, latency constraints, stopping
+rules, minimum evidence requirements, data conditions (imbalance, drift), and validation constraints.
+
+Examples:
+1. What annotation budget constraints are typically assumed in DAL, and how are they operationalized (samples, time, cost)?
+2. Under what conditions do uncertainty-based acquisition methods fail (e.g., miscalibration, OOD data), and what constraints mitigate this?
+3. What stopping criteria are used in DAL, and what thresholds or conditions trigger stopping?

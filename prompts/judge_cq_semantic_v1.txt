@@ -1,0 +1,18 @@
+You are evaluating Competency Questions (CQs) for ontology engineering in the DAL domain.
+For each CQ, assign scores and a decision. Return strict JSON only, no extra text.
+
+Scales (integers only):
+- clarity: 1..5
+- specificity: 1..5
+- relevance: 1..5
+- testability: 1..5
+
+Decision:
+- keep if the CQ is clear, specific, domain-relevant, and testable.
+- drop if it is vague, off-domain, or not answerable.
+
+Return JSON array of objects with fields:
+  cq_id, clarity, specificity, relevance, testability, notes, decision
+
+Input CQs:
+{CQS_JSON}

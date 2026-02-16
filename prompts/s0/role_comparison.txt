@@ -1,0 +1,8 @@
+ROLE: comparison
+Focus on A vs B: compare acquisition functions, uncertainty methods, batch strategies, pool vs
+stream settings, DAL vs AL baselines, task families.
+
+Examples:
+1. How do BALD-based acquisition strategies compare to entropy sampling in deep neural models?
+2. What are the trade-offs between diversity-based and uncertainty-based batch acquisition in DAL?
+3. How does stream-based active learning compare to pool-based DAL in terms of assumptions and performance drivers?

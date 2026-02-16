@@ -1,0 +1,111 @@
+# Единый конфиг пайплайна: BigARTM (uni+bi) -> CQ -> онтология.
+# Используется скриптами scripts/pipeline/ и шагами 6–7.
+
+data_root: data
+artifacts_root: artifacts
+weaviate_url: "http://localhost:8081"
+embedding_model: "models/bge-m3"
+chunk_size: 512
+chunk_overlap: 50
+
+# Список датасетов (синхрон с index_all_datasets.sh)
+datasets:
+  - ml_systems
+  - deep_learning_neural_networks
+  - diffusion_models
+  - generative_models_in_pathology
+  - graph_nn_research
+  - graph_nn_systems
+  - healthcare_foundation_models
+  - ml_systems_distributed_training
+  - ml_systems_inference_system
+  - ml_systems_mixture_of_experts_moe
+  - model_quantization
+  - multimodal_ai
+  - speech_recognition_synthesis
+  - deep_active_learning
+  - causal_inference
+  - automl
+
+# K (число тем) по датасетам. Альтернатива: задать k_selection_path к artifacts/topic_counting/k_selection_all.json
+dataset_k:
+  ml_systems: 50
+  deep_learning_neural_networks: 30
+  diffusion_models: 30
+  generative_models_in_pathology: 40
+  graph_nn_research: 50
+  graph_nn_systems: 40
+  healthcare_foundation_models: 50
+  ml_systems_distributed_training: 50
+  ml_systems_inference_system: 70
+  ml_systems_mixture_of_experts_moe: 70
+  model_quantization: 30
+  multimodal_ai: 30
+  speech_recognition_synthesis: 60
+  deep_active_learning: 20
+  causal_inference: 70
+  automl: 30
+
+# BigARTM: фиксированно униграммы + биграммы
+bigartm:
+  modalities: "uni,bi"
+  modality_weights: "2:1"
+
+# LLM для генерации CQ, scoring, онтологии
+llm:
+  generation_model: null  # задать в .env или переопределить (например openai/gpt-4o-mini)
+  temperature: 0.3
+  max_tokens: 4096
+  max_retries: 3
+  semantic_model: null
+  semantic_temperature: 0.0
+  semantic_max_output_tokens: 2048
+
+# Эксперимент (квоты CQ по ролям)
+experiment:
+  roles: ["class", "relation", "process", "constraint", "comparison"]
+  n_target_cqs: 200
+  oversample_ratio: 0.60
+  per_topic:
+    role_quota: {}
+  min_topics: null
+
+# Grounding (Weaviate). При запуске с --dataset класс подставляется как Chunk_<dataset>
+grounding:
+  weaviate_url: "http://localhost:8081"
+  weaviate_class: null
+  weaviate_text_property: "text"
+  weaviate_id_property: "chunk_id"
+  weaviate_article_property: "paper_id"
+  top_k: 10
+  score_threshold: null
+  score_source: "certainty"
+  distance_metric: "cosine"
+  store_evidence_text: true
+  evidence_text_max_chars: 600
+  checkpoint_every: 25
+
+# Эмбеддинги (model используется 03/04 для grounding/merge)
+embedding:
+  model: "models/bge-m3"
+  model_name: "models/bge-m3"
+  batch_size: 32
+
+# Контекст для генерации CQ
+context:
+  top_k: 10
+  max_chars_per_chunk: 1500
+
+# Дедупликация CQ
+dedup:
+  threshold: 0.85
+
+# Онтология
+ontology:
+  base_iri: "http://example.org"
+  merge_similarity_threshold: 0.92
+  llm_cache_path: null
+
+# Фильтрация при semantic scoring (опционально)
+filtering:
+  min_score: null

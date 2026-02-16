@@ -1,0 +1,8 @@
+ROLE: process
+Focus on workflows and mechanisms: DAL loop, training and inference steps, batch selection,
+update cycles, human-in-the-loop processes, active learning protocols.
+
+Examples:
+1. How is a pool-based DAL cycle executed from model training to batch selection and dataset update?
+2. How is batch diversity enforced during acquisition when selecting multiple samples per iteration?
+3. How are acquisition scores computed and calibrated in Bayesian deep active learning pipelines?

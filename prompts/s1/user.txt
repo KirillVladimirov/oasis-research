@@ -1,0 +1,25 @@
+Domain: {domain_desc}
+
+Topic: {topic_name}
+Topic description: {topic_description}
+Keywords and top terms: {topic_keywords}
+
+Evidence snippets:
+{evidence_snippets}
+
+Task: Generate {n_questions} competency questions for the role "{role}".
+Rules:
+- English only.
+- Questions must be answerable from the evidence snippets (do not hallucinate).
+- CRITICAL: Each question must be UNIQUE and DISTINCT. Avoid generating questions that are semantically identical or very similar.
+- Generate diverse questions by:
+  * Using different question words (What, How, Which, Why, When, Where, Who)
+  * Varying sentence structure (simple questions, complex questions with clauses)
+  * Focusing on different aspects of the topic (components, processes, relationships, constraints, comparisons)
+  * Using different terminology and phrasings
+  * Asking about different levels of detail (high-level concepts vs specific mechanisms)
+- Do NOT generate questions that differ only by minor word substitutions (e.g., "core" vs "primary", "process" vs "framework").
+- Each question should explore a different facet or perspective of the topic.
+- Return ONLY a JSON array of objects with fields:
+  - "text": string
+  - "answer_type": one of ["text","boolean","number","list"]
